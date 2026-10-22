@@ -3,6 +3,15 @@
 Par défaut le studio est en **`dry_run`** : il prépare la charge utile exacte (`data/publications/*.json`) sans rien
 envoyer. Les identifiants se placent dans **GitHub → Settings → Secrets and variables → Actions** (jamais dans le code).
 
+## Voix premium (recommandé avant toute publication)
+La voix espeak-ng (pilote local) est robotique : le contrôle qualité **refuse sa publication** hors `dry_run`.
+Sur GitHub Actions, la voix neuronale Piper (gratuite) est utilisée automatiquement. Pour une voix vraiment naturelle :
+1. Créer un compte sur elevenlabs.io (abonnement payant requis pour l'usage commercial, à partir d'environ 5-6 $/mois).
+2. Profile → API Keys → créer une clé ; l'ajouter en secret GitHub `ELEVENLABS_API_KEY` (ne jamais la coller dans un fichier).
+3. Facultatif : choisir une voix française dans la Voice Library et mettre son identifiant dans
+   `config/studio.yaml` → `voice.elevenlabs_voice_id`.
+Coût ≈ 0,05 $ par vidéo de 30 s, compté dans le budget et le tableau de bord.
+
 ## YouTube Shorts
 1. Google Cloud Console → nouveau projet → activer **YouTube Data API v3**.
 2. Écran de consentement OAuth (type Externe, vous comme utilisateur test) ; identifiants « Application de bureau ».

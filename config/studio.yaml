@@ -25,7 +25,7 @@ unit_costs:
   llm_script_usd: 0.05       # 1 script ≈ 2-3k tokens entrée + 2k sortie (claude-opus-5-5 : 4 $/20 $ par MTok)
   llm_trends_usd: 0.03
   tts_local_usd: 0.0         # Piper / espeak-ng en local
-  tts_cloud_per_1k_chars_usd: 0.015
+  tts_cloud_per_1k_chars_usd: 0.10   # ElevenLabs Multilingual ≈ 80-100 $ / M caractères (≈ 0,05 $ par vidéo)
   visuals_procedural_usd: 0.0
   compute_per_video_usd: 0.0 # GitHub Actions : gratuit dans le quota (dépôt public ou 2000 min/mois)
 
@@ -35,7 +35,9 @@ retry:
   stale_lock_minutes: 30      # une tâche "running" plus vieille est considérée bloquée et relancée
 
 voice:
-  engine: auto               # auto = piper si un modèle est présent, sinon espeak-ng
+  engine: auto               # auto = elevenlabs si ELEVENLABS_API_KEY, sinon piper si le modèle est présent, sinon espeak-ng
+  elevenlabs_voice_id: JBFqnCBsd6RMkjVDRZzb   # voix prédéfinie ; remplacer par une voix française de la Voice Library
+  elevenlabs_model: eleven_multilingual_v2
   piper_model: models/fr_FR-siwis-medium.onnx
   espeak_voice: fr-fr
   espeak_speed: 165
@@ -47,6 +49,7 @@ quality:
   lufs_tolerance: 2.5
   max_caption_chars_per_line: 26
   require_sources: true      # aucune affirmation factuelle sans source
+  allow_robotic_voice_publish: false   # espeak-ng : autorisé en dry_run seulement
   banned_terms: ["garanti", "100% sûr", "guérit", "miracle", "devenir riche rapidement"]
 
 publishing:

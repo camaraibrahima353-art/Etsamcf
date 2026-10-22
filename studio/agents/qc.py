@@ -3,6 +3,7 @@ termes interdits, lisibilité) et juridique (licences de toutes les ressources, 
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
 
@@ -101,6 +102,10 @@ def run(db, video_id: str):
     assets = json.loads(v["assets_json"] or "[]")
     check("licence connue pour chaque ressource", assets and all(a.get("license") for a in assets), f"{len(assets)} ressource(s)")
     check("mention IA activée pour la publication", cfg["publishing"]["ai_disclosure"])
+    voice = next((a.get("engine") for a in assets if a.get("type") == "voix"), "")
+    mode = os.environ.get("STUDIO_PUBLISH_MODE", cfg["publishing"]["mode"])
+    check("voix de qualité publiable", voice != "espeak-ng" or mode == "dry_run" or q.get("allow_robotic_voice_publish"),
+          f"moteur {voice} (robotique) refusé en mode {mode}")
 
     blocking_fail = [c for c in checks if c["blocking"] and not c["ok"]]
     report = {"video_id": video_id, "passed": not blocking_fail, "duration_s": dur, "lufs": lufs, "checks": checks}

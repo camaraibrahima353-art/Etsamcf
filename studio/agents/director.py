@@ -18,6 +18,7 @@ def run(db, video_id: str):
     for i, sc in enumerate(script["scenes"]):
         wav = mdir / f"voice_{i:02d}.wav"
         speech = tts.synth(sc["voice"], wav)
+        db.add_cost("tts", tts.cost_usd(sc["voice"]), video_id)
         img = visuals.render_scene(mdir / f"scene_{i:02d}.png", sc["onscreen"], sc["visual"], n["palette"], n.get("label", n["name"]), i, total, video_id)
         pad = 0.6 if i == 0 else SCENE_PAD_S  # l'accroche reste un peu plus longtemps à l'écran
         shots.append({"index": i, "voice": sc["voice"], "onscreen": sc["onscreen"], "visual": sc["visual"],
@@ -27,6 +28,5 @@ def run(db, video_id: str):
     assets.append({"type": "musique", "license": "Nappe synthétisée par FFmpeg (aevalsrc), propriété du studio"})
     shotlist = {"video_id": video_id, "niche": v["niche"], "palette": n["palette"], "scenes": shots}
     (mdir / "shotlist.json").write_text(json.dumps(shotlist, ensure_ascii=False, indent=2))
-    db.add_cost("tts", 0.0, video_id)
     db.update_video(video_id, assets_json=json.dumps(assets, ensure_ascii=False), status="media_ready")
     return {"scenes": len(shots), "voice": tts.engine(), "duration_s": round(sum(s["duration_s"] for s in shots), 1)}

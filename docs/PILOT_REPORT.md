@@ -41,9 +41,10 @@ statistique « moyenne » remplacée par « autour de » (médianes dans l'étud
 
 ## Limites constatées
 
-- **Voix** : le pilote local utilise **espeak-ng** (voix robotique) car Hugging Face est bloqué dans le conteneur ;
+- **Voix** : jugée « pas du tout bonne » à l'écoute. Le pilote local utilise **espeak-ng** (voix robotique) car Hugging Face est bloqué dans le conteneur ;
   sur GitHub Actions la voix neuronale **Piper fr_FR-siwis-medium** est téléchargée automatiquement. Une voix premium
-  (ElevenLabs ≈ 0,02 $/vidéo) améliorerait nettement la rétention.
+  (ElevenLabs ≈ 0,02 $/vidéo) améliorerait nettement la rétention. Correctif livré : moteur ElevenLabs intégré (activé dès que le secret
+  `ELEVENLABS_API_KEY` existe) et blocage par le QC de toute publication réelle en voix espeak-ng.
 - **Visuels** : procéduraux (texte animé sur fonds abstraits). Propres et libres de droits, mais moins captivants que
   des plans illustratifs ; c'est le principal levier d'amélioration (génération d'images/vidéo IA sur les niches gagnantes).
 - **Aucune statistique de performance** : rien n'a été publié (mode `dry_run`, pas d'identifiants). Les comparaisons

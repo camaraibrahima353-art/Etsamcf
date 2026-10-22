@@ -1,6 +1,8 @@
-"""Synthèse vocale locale et gratuite : Piper (voix neuronale) ou espeak-ng (secours)."""
+"""Synthèse vocale. Ordre en mode auto : ElevenLabs (voix premium, si ELEVENLABS_API_KEY) > Piper (neuronal local,
+gratuit) > espeak-ng (secours robotique : le contrôle qualité refuse de le publier hors dry_run)."""
 from __future__ import annotations
 
+import os
 import shutil
 import subprocess
 import wave
@@ -22,11 +24,39 @@ def _piper_model() -> Path | None:
 def engine() -> str:
     eng = settings()["voice"]["engine"]
     if eng == "auto":
+        if os.environ.get("ELEVENLABS_API_KEY"):
+            return "elevenlabs"
         return "piper" if _piper_model() else "espeak-ng"
     return eng
 
 
+def cost_usd(text: str) -> float:
+    """Coût estimé de la synthèse (0 pour les moteurs locaux)."""
+    if engine() != "elevenlabs":
+        return 0.0
+    return len(text) / 1000 * settings()["unit_costs"]["tts_cloud_per_1k_chars_usd"]
+
+
+def _elevenlabs(text: str, out_mp3: Path, session=None):
+    import requests
+
+    v = settings()["voice"]
+    r = (session or requests).post(
+        f"https://api.elevenlabs.io/v1/text-to-speech/{v['elevenlabs_voice_id']}",
+        params={"output_format": "mp3_44100_128"},
+        headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"], "Content-Type": "application/json"},
+        json={"text": text, "model_id": v["elevenlabs_model"], "language_code": "fr",
+              "voice_settings": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.25, "use_speaker_boost": True}},
+        timeout=120,
+    )
+    if r.status_code != 200:
+        raise RuntimeError(f"ElevenLabs HTTP {r.status_code} : {r.text[:200]}")
+    out_mp3.write_bytes(r.content)
+
+
 def license_note() -> str:
+    if engine() == "elevenlabs":
+        return "ElevenLabs (usage commercial autorisé avec un abonnement payant ; offre gratuite = attribution, non commercial)"
     if engine() == "piper":
         return PIPER_LICENSES.get(_piper_model().stem, "Piper (MIT) + licence de la voix : voir MODEL_CARD")
     return "espeak-ng (GPL-3.0 pour le logiciel ; l'audio produit n'est pas soumis à la GPL)"
@@ -39,7 +69,10 @@ def synth(text: str, out_wav: Path) -> float:
     """Génère `out_wav` (mono 44,1 kHz) et renvoie sa durée en secondes."""
     out_wav.parent.mkdir(parents=True, exist_ok=True)
     raw = out_wav.with_suffix(".raw.wav")
-    if engine() == "piper":
+    if engine() == "elevenlabs":
+        raw = out_wav.with_suffix(".raw.mp3")
+        _elevenlabs(text, raw)
+    elif engine() == "piper":
         from piper import PiperVoice
 
         model = _piper_model()

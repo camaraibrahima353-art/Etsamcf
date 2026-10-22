@@ -219,3 +219,18 @@ def test_full_pipeline_with_injected_failure(studio, monkeypatch):
     assert (data_dir() / v["final_path"]).exists()
     pubs = studio.q("SELECT status FROM publications")
     assert pubs and all(p["status"] == "dry_run" for p in pubs)
+
+
+def test_elevenlabs_engine_selection_and_request(tmp_path, monkeypatch):
+    from studio.media import tts
+    monkeypatch.setenv("ELEVENLABS_API_KEY", "el" * 10)
+    assert tts.engine() == "elevenlabs"
+    assert tts.cost_usd("x" * 500) > 0
+    s = FakeSession([("api.elevenlabs.io", type("R", (), {"status_code": 200, "content": b"ID3", "text": ""})())])
+    tts._elevenlabs("Bonjour", tmp_path / "a.mp3", session=s)
+    _, url, kw = s.calls[0]
+    assert kw["json"]["model_id"] == "eleven_multilingual_v2" and kw["json"]["language_code"] == "fr"
+    assert kw["headers"]["xi-api-key"] == "el" * 10
+    assert (tmp_path / "a.mp3").read_bytes() == b"ID3"
+    monkeypatch.delenv("ELEVENLABS_API_KEY")
+    assert tts.engine() in ("piper", "espeak-ng")

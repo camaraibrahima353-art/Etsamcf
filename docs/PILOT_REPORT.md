@@ -74,4 +74,5 @@ le suivant reprend la file là où elle en était.
 
 20 scripts supplémentaires (2 par niche) ajoutés dans `backlog/queue/`, sources vérifiées par recherche web ; corrections
 apportées avant validation : origine de l'effet Zeigarnik (Kurt Lewin, Berlin), datation du « Sahara vert »,
-formulation du titre sur la tour Eiffel. Autonomie : ≈ 13 passages, soit 3 jours à 4 passages par jour.
+formulation du titre sur la tour Eiffel. Rendu de contrôle des 20 scripts : 18 validés du premier coup, 2 bloqués par le
+QC sur le mot « garanti » (employé dans une négation) puis reformulés et validés : 20/20 prêts. Autonomie : ≈ 13 passages, soit 3 jours à 4 passages par jour.

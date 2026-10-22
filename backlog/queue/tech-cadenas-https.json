@@ -1,6 +1,6 @@
 {
   "niche": "tech_ia",
-  "topic": "Le cadenas HTTPS ne garantit pas qu'un site est fiable",
+  "topic": "Le cadenas HTTPS ne prouve pas qu'un site est fiable",
   "format": "mythe_realite",
   "hook_variant": "mythe",
   "hook": "Le petit cadenas ne veut pas dire que le site est sûr.",
@@ -47,7 +47,7 @@
     }
   ],
   "title": "Le cadenas HTTPS ne veut pas dire « site sûr » 🔒",
-  "description": "Ce que le cadenas garantit vraiment, et comment repérer l'hameçonnage.",
+  "description": "Ce que le cadenas signifie vraiment, et comment repérer l'hameçonnage.",
   "hashtags": [
     "#cybersecurite",
     "#phishing",

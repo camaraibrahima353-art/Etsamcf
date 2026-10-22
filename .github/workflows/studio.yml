@@ -1,5 +1,6 @@
 # Ordonnanceur 24/7 du studio : un passage toutes les 6 heures + déclenchement manuel.
 # L'état (base SQLite, rapports, journaux) passe d'une exécution à l'autre sous forme d'artefact « studio-state ».
+# Interrupteur d'urgence : variable de dépôt STUDIO_STATE=stopped (Settings > Variables > Actions).
 name: studio
 
 on:

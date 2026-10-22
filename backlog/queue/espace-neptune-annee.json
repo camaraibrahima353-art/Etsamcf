@@ -1,0 +1,62 @@
+{
+  "niche": "espace",
+  "topic": "Neptune n'a fait qu'un tour du Soleil depuis sa découverte",
+  "format": "fait_surprenant",
+  "hook_variant": "chiffre",
+  "hook": "Depuis sa découverte, cette planète n'a fait qu'un seul tour du Soleil.",
+  "scenes": [
+    {
+      "voice": "Depuis sa découverte, cette planète n'a fait qu'un seul tour du Soleil.",
+      "onscreen": "1 seul tour",
+      "visual": {
+        "type": "bignumber",
+        "accent": "1"
+      }
+    },
+    {
+      "voice": "C'est Neptune, découverte en mil huit cent quarante-six, grâce aux calculs d'Urbain Le Verrier.",
+      "onscreen": "Neptune, 1846",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Elle est si loin qu'une année neptunienne dure environ cent soixante-cinq années terrestres.",
+      "onscreen": "1 année = 165 ans",
+      "visual": {
+        "type": "bignumber",
+        "accent": "165"
+      }
+    },
+    {
+      "voice": "Elle a donc bouclé son premier tour complet depuis sa découverte en deux mille onze.",
+      "onscreen": "Premier tour : 2011",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Sur Neptune, personne n'aurait jamais fêté son premier anniversaire. Quelle planète veux-tu ensuite ?",
+      "onscreen": "Quelle planète ensuite ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Neptune n'a fait qu'1 tour du Soleil depuis 1846",
+  "description": "Une année sur Neptune dure environ 165 ans terrestres.",
+  "hashtags": [
+    "#neptune",
+    "#espace",
+    "#planetes"
+  ],
+  "sources": [
+    {
+      "title": "Neptune (planète) — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Neptune_(plan%C3%A8te)"
+    }
+  ]
+}

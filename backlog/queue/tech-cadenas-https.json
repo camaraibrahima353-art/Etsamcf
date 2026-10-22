@@ -1,0 +1,66 @@
+{
+  "niche": "tech_ia",
+  "topic": "Le cadenas HTTPS ne garantit pas qu'un site est fiable",
+  "format": "mythe_realite",
+  "hook_variant": "mythe",
+  "hook": "Le petit cadenas ne veut pas dire que le site est sûr.",
+  "scenes": [
+    {
+      "voice": "Le petit cadenas dans ton navigateur ne veut pas dire que le site est fiable.",
+      "onscreen": "Cadenas = site fiable ?",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Il signifie seulement que la connexion est chiffrée, grâce au protocole HTTPS.",
+      "onscreen": "Connexion chiffrée",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Personne entre toi et le site ne peut lire ce que tu envoies. Mais le site lui-même peut être un piège.",
+      "onscreen": "Le site peut mentir",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Beaucoup de sites d'hameçonnage ont aussi un cadenas. Vérifie plutôt l'adresse exacte, lettre par lettre.",
+      "onscreen": "Vérifie l'adresse",
+      "visual": {
+        "type": "list",
+        "accent": "1"
+      }
+    },
+    {
+      "voice": "Et ne clique jamais sur un lien reçu par message pour payer ou te connecter. Partage à quelqu'un qui doit le savoir.",
+      "onscreen": "Partage l'astuce",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Le cadenas HTTPS ne veut pas dire « site sûr » 🔒",
+  "description": "Ce que le cadenas garantit vraiment, et comment repérer l'hameçonnage.",
+  "hashtags": [
+    "#cybersecurite",
+    "#phishing",
+    "#astuce"
+  ],
+  "sources": [
+    {
+      "title": "HyperText Transfer Protocol Secure — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/HyperText_Transfer_Protocol_Secure"
+    },
+    {
+      "title": "Hameçonnage — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Hame%C3%A7onnage"
+    }
+  ]
+}

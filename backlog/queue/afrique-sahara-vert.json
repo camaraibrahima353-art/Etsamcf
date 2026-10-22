@@ -1,0 +1,66 @@
+{
+  "niche": "afrique",
+  "topic": "Le Sahara était vert il y a quelques milliers d'années",
+  "format": "fait_surprenant",
+  "hook_variant": "affirmation_choc",
+  "hook": "Le plus grand désert chaud du monde était autrefois vert.",
+  "scenes": [
+    {
+      "voice": "Le plus grand désert chaud du monde était autrefois vert.",
+      "onscreen": "Le Sahara… vert ?",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Le Sahara couvre environ neuf millions de kilomètres carrés, presque la taille des États-Unis.",
+      "onscreen": "≈ 9 millions de km²",
+      "visual": {
+        "type": "bignumber",
+        "accent": "9M"
+      }
+    },
+    {
+      "voice": "Mais il y a encore environ six mille ans, une grande partie était couverte de prairies, de lacs et d'animaux.",
+      "onscreen": "Prairies et lacs",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Des peintures rupestres montrent des girafes et du bétail là où il n'y a plus que du sable.",
+      "onscreen": "Des girafes peintes",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Les scientifiques appellent cela la période humide africaine. Tu le savais ?",
+      "onscreen": "Tu le savais ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Le Sahara était vert il y a 6 000 ans 🌿",
+  "description": "La période humide africaine : quand le Sahara était couvert de végétation.",
+  "hashtags": [
+    "#sahara",
+    "#afrique",
+    "#geographie"
+  ],
+  "sources": [
+    {
+      "title": "Sahara — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Sahara"
+    },
+    {
+      "title": "African humid period — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/African_humid_period"
+    }
+  ]
+}

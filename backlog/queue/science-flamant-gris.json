@@ -1,0 +1,66 @@
+{
+  "niche": "science",
+  "topic": "Les flamants roses naissent gris",
+  "format": "fait_surprenant",
+  "hook_variant": "affirmation_choc",
+  "hook": "Les flamants roses ne naissent pas roses.",
+  "scenes": [
+    {
+      "voice": "Les flamants roses ne naissent pas roses.",
+      "onscreen": "Né… gris ?",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "À la naissance, le poussin a un duvet gris ou blanc, et un bec droit.",
+      "onscreen": "Poussin gris",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Sa couleur vient de ce qu'il mange : des algues et de petits crustacés riches en pigments, les caroténoïdes.",
+      "onscreen": "Les caroténoïdes",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Plus son alimentation contient de ces pigments, plus son plumage devient rose vif.",
+      "onscreen": "Tu es ce que tu manges",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "C'est pour cela qu'en captivité, on enrichit souvent leur nourriture. Tu connaissais ?",
+      "onscreen": "Tu connaissais ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Les flamants roses naissent gris (vraiment)",
+  "description": "D'où vient la couleur rose des flamants ? De leur alimentation.",
+  "hashtags": [
+    "#flamantrose",
+    "#animaux",
+    "#science"
+  ],
+  "sources": [
+    {
+      "title": "Flamant rose — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Flamant_rose"
+    },
+    {
+      "title": "Flamingo — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Flamingo"
+    }
+  ]
+}

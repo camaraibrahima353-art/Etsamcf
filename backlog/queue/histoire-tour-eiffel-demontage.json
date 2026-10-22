@@ -1,0 +1,70 @@
+{
+  "niche": "histoire",
+  "topic": "La tour Eiffel devait être démontée",
+  "format": "histoire",
+  "hook_variant": "question",
+  "hook": "Pourquoi la tour Eiffel n'a-t-elle jamais été démontée ?",
+  "scenes": [
+    {
+      "voice": "Pourquoi la tour Eiffel n'a-t-elle jamais été démontée ? Car c'était prévu.",
+      "onscreen": "Elle devait disparaître",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Elle est construite pour l'Exposition universelle de Paris, en mil huit cent quatre-vingt-neuf.",
+      "onscreen": "1889",
+      "visual": {
+        "type": "bignumber",
+        "accent": "1889"
+      }
+    },
+    {
+      "voice": "Gustave Eiffel obtient le droit de l'exploiter pendant vingt ans. Ensuite, elle pouvait être démontée.",
+      "onscreen": "Une concession de 20 ans",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Beaucoup d'artistes la trouvaient d'ailleurs affreuse et avaient signé une protestation.",
+      "onscreen": "Jugée affreuse",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Ce qui l'a sauvée : la science. Elle sert d'antenne géante pour la télégraphie sans fil.",
+      "onscreen": "Sauvée par la radio",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Aujourd'hui, c'est l'un des monuments les plus visités au monde. Tu l'as déjà vue ?",
+      "onscreen": "Tu l'as déjà vue ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "La tour Eiffel aurait pu être démontée en 1909",
+  "description": "Construite pour 1889, la tour Eiffel a été sauvée par la radio.",
+  "hashtags": [
+    "#toureiffel",
+    "#paris",
+    "#histoire"
+  ],
+  "sources": [
+    {
+      "title": "Tour Eiffel — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Tour_Eiffel"
+    }
+  ]
+}

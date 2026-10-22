@@ -1,0 +1,62 @@
+{
+  "niche": "maths",
+  "topic": "Le paradoxe des anniversaires",
+  "format": "fait_surprenant",
+  "hook_variant": "chiffre",
+  "hook": "Avec seulement vingt-trois personnes, il y a plus d'une chance sur deux.",
+  "scenes": [
+    {
+      "voice": "Dans une classe de vingt-trois personnes, il y a plus d'une chance sur deux que deux aient le même anniversaire.",
+      "onscreen": "23 personnes",
+      "visual": {
+        "type": "bignumber",
+        "accent": "23"
+      }
+    },
+    {
+      "voice": "Ça paraît impossible : il y a trois cent soixante-cinq jours dans l'année.",
+      "onscreen": "365 jours pourtant",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "L'astuce : on ne compare pas une personne à toutes les autres, mais toutes les paires entre elles.",
+      "onscreen": "Toutes les paires",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Avec vingt-trois personnes, il y a deux cent cinquante-trois paires possibles. La probabilité dépasse cinquante pour cent.",
+      "onscreen": "253 paires → 50,7 %",
+      "visual": {
+        "type": "bignumber",
+        "accent": "253"
+      }
+    },
+    {
+      "voice": "Avec soixante-dix personnes, c'est presque certain. Teste-le dans ta classe et raconte-nous.",
+      "onscreen": "Teste-le !",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "23 personnes suffisent : le paradoxe des anniversaires 🎂",
+  "description": "Pourquoi deux personnes partagent si souvent un anniversaire.",
+  "hashtags": [
+    "#maths",
+    "#probabilites",
+    "#paradoxe"
+  ],
+  "sources": [
+    {
+      "title": "Paradoxe des anniversaires — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Paradoxe_des_anniversaires"
+    }
+  ]
+}

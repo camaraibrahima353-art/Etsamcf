@@ -1,0 +1,66 @@
+{
+  "niche": "histoire",
+  "topic": "Napoléon n'était pas petit",
+  "format": "mythe_realite",
+  "hook_variant": "mythe",
+  "hook": "Napoléon était petit ? C'est un mythe.",
+  "scenes": [
+    {
+      "voice": "Napoléon était petit ? C'est un mythe.",
+      "onscreen": "Mythe : Napoléon petit",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Il mesurait environ un mètre soixante-neuf, une taille plutôt moyenne pour un Français de son époque.",
+      "onscreen": "~1,69 m",
+      "visual": {
+        "type": "bignumber",
+        "accent": "1,69"
+      }
+    },
+    {
+      "voice": "La confusion vient en partie des unités : cinq pieds deux pouces français ne valent pas cinq pieds deux pouces anglais.",
+      "onscreen": "Pouce français ≠ pouce anglais",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Les caricaturistes britanniques, comme James Gillray, l'ont aussi dessiné minuscule pour s'en moquer.",
+      "onscreen": "La caricature a gagné",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Résultat : deux siècles plus tard, le mythe tient toujours. Quel autre mythe historique veux-tu démonter ?",
+      "onscreen": "Ton mythe préféré ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Napoléon n'était pas petit : l'origine du mythe",
+  "description": "Unités de mesure et caricatures britanniques : pourquoi on croit Napoléon petit.",
+  "hashtags": [
+    "#napoleon",
+    "#histoire",
+    "#mythe"
+  ],
+  "sources": [
+    {
+      "title": "Napoléon Ier — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Napol%C3%A9on_Ier"
+    },
+    {
+      "title": "Napoleon complex — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Napoleon_complex"
+    }
+  ]
+}

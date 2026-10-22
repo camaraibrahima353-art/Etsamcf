@@ -1,0 +1,62 @@
+{
+  "niche": "psycho",
+  "topic": "L'effet Zeigarnik et les tâches inachevées",
+  "format": "histoire",
+  "hook_variant": "affirmation_choc",
+  "hook": "Ton cerveau retient mieux ce que tu n'as pas fini.",
+  "scenes": [
+    {
+      "voice": "Ton cerveau retient souvent mieux ce que tu n'as pas fini.",
+      "onscreen": "Inachevé = mémorisé",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Dans les années mil neuf cent vingt, à Berlin, le psychologue Kurt Lewin observe un serveur de café.",
+      "onscreen": "Un serveur de café",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Il se souvient des commandes non payées, puis les oublie une fois réglées. Son étudiante, Bluma Zeigarnik, va l'étudier.",
+      "onscreen": "Payé = oublié",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Ses expériences suggèrent qu'une tâche interrompue reste active dans notre esprit. Les études suivantes sont plus nuancées.",
+      "onscreen": "Un effet discuté",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Les séries l'utilisent avec leurs fins à suspense. Astuce : pour te lancer, commence juste la tâche.",
+      "onscreen": "Commence, juste commence",
+      "visual": {
+        "type": "list",
+        "accent": "1"
+      }
+    }
+  ],
+  "title": "Ton cerveau n'aime pas les tâches inachevées",
+  "description": "L'effet Zeigarnik, du café viennois aux fins de séries.",
+  "hashtags": [
+    "#psychologie",
+    "#productivite",
+    "#cerveau"
+  ],
+  "sources": [
+    {
+      "title": "Effet Zeigarnik — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Effet_Zeigarnik"
+    }
+  ]
+}

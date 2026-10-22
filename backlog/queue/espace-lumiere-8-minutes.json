@@ -1,0 +1,66 @@
+{
+  "niche": "espace",
+  "topic": "La lumière du Soleil met huit minutes à nous parvenir",
+  "format": "fait_surprenant",
+  "hook_variant": "affirmation_choc",
+  "hook": "Le Soleil que tu vois, c'est le Soleil d'il y a huit minutes.",
+  "scenes": [
+    {
+      "voice": "Le Soleil que tu vois, c'est le Soleil d'il y a huit minutes.",
+      "onscreen": "Le Soleil… du passé",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Sa lumière parcourt environ cent cinquante millions de kilomètres pour arriver jusqu'à nous.",
+      "onscreen": "150 millions de km",
+      "visual": {
+        "type": "bignumber",
+        "accent": "150M"
+      }
+    },
+    {
+      "voice": "Même à trois cent mille kilomètres par seconde, il lui faut environ huit minutes et vingt secondes.",
+      "onscreen": "≈ 8 min 20 s",
+      "visual": {
+        "type": "bignumber",
+        "accent": "8:20"
+      }
+    },
+    {
+      "voice": "Si le Soleil s'éteignait, on continuerait donc à le voir briller pendant huit minutes.",
+      "onscreen": "8 minutes de sursis",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Et la lumière de certaines étoiles est partie il y a des milliers d'années. Regarder le ciel, c'est regarder le passé.",
+      "onscreen": "Le ciel = le passé",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Le Soleil que tu vois a 8 minutes de retard ☀️",
+  "description": "Pourquoi la lumière du Soleil met environ 8 minutes à nous atteindre.",
+  "hashtags": [
+    "#soleil",
+    "#espace",
+    "#astronomie"
+  ],
+  "sources": [
+    {
+      "title": "Soleil — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Soleil"
+    },
+    {
+      "title": "Unité astronomique — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Unit%C3%A9_astronomique"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "niche": "langues",
+  "topic": "Eventually, attend, pretend : trois faux amis anglais",
+  "format": "liste",
+  "hook_variant": "defi",
+  "hook": "Trois mots anglais qui piègent même les bons élèves.",
+  "scenes": [
+    {
+      "voice": "Trois mots anglais qui piègent même les bons élèves. Prêt ?",
+      "onscreen": "3 nouveaux pièges",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Un : eventually. Ça ne veut pas dire éventuellement, mais finalement.",
+      "onscreen": "eventually = finalement",
+      "visual": {
+        "type": "list",
+        "accent": "1"
+      }
+    },
+    {
+      "voice": "Deux : to attend. Ce n'est pas attendre, c'est assister à. Attendre se dit to wait.",
+      "onscreen": "attend = assister à",
+      "visual": {
+        "type": "list",
+        "accent": "2"
+      }
+    },
+    {
+      "voice": "Trois : to pretend. Ce n'est pas prétendre, c'est faire semblant.",
+      "onscreen": "pretend = faire semblant",
+      "visual": {
+        "type": "list",
+        "accent": "3"
+      }
+    },
+    {
+      "voice": "Le piège numéro deux est le plus courant. Tu en connaissais combien ?",
+      "onscreen": "Score sur 3 ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "3 faux amis anglais qui piègent tout le monde",
+  "description": "Eventually, attend, pretend : trois pièges classiques.",
+  "hashtags": [
+    "#anglais",
+    "#english",
+    "#fauxamis"
+  ],
+  "sources": [
+    {
+      "title": "Cambridge Dictionary — eventually",
+      "url": "https://dictionary.cambridge.org/dictionary/english/eventually"
+    },
+    {
+      "title": "Cambridge Dictionary — pretend",
+      "url": "https://dictionary.cambridge.org/dictionary/english/pretend"
+    }
+  ]
+}

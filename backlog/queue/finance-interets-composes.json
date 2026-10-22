@@ -1,0 +1,62 @@
+{
+  "niche": "finance",
+  "topic": "Les intérêts composés expliqués avec mille euros",
+  "format": "mini_tuto",
+  "hook_variant": "question",
+  "hook": "Pourquoi on dit que les intérêts composés sont la huitième merveille du monde ?",
+  "scenes": [
+    {
+      "voice": "Mille euros placés à cinq pour cent par an : combien après dix ans ?",
+      "onscreen": "1 000 € à 5 %",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Avec des intérêts simples, tu gagnes cinquante euros par an. Après dix ans : mille cinq cents euros.",
+      "onscreen": "Simples : 1 500 €",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Avec des intérêts composés, les intérêts produisent eux-mêmes des intérêts chaque année.",
+      "onscreen": "Les intérêts font des petits",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Résultat après dix ans : environ mille six cent vingt-neuf euros. Et l'écart grandit avec le temps.",
+      "onscreen": "Composés : ≈ 1 629 €",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Le temps compte plus que le montant. Attention : un rendement n'est jamais garanti. Contenu pédagogique, pas un conseil personnalisé.",
+      "onscreen": "Le temps est ton allié",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Intérêts composés : l'effet boule de neige expliqué",
+  "description": "Intérêts simples vs composés sur 10 ans. Contenu pédagogique, pas un conseil financier personnalisé.",
+  "hashtags": [
+    "#interetscomposes",
+    "#epargne",
+    "#argent"
+  ],
+  "sources": [
+    {
+      "title": "Intérêts composés — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Int%C3%A9r%C3%AAts_compos%C3%A9s"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "niche": "tech_ia",
+  "topic": "Le premier bug informatique documenté était un vrai insecte",
+  "format": "histoire",
+  "hook_variant": "affirmation_choc",
+  "hook": "Le premier bug informatique documenté était un vrai insecte.",
+  "scenes": [
+    {
+      "voice": "Le premier bug informatique documenté était un vrai insecte.",
+      "onscreen": "Un vrai insecte",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Nous sommes en mil neuf cent quarante-sept, à l'université Harvard, sur l'ordinateur Mark Deux.",
+      "onscreen": "Harvard, 1947",
+      "visual": {
+        "type": "bignumber",
+        "accent": "1947"
+      }
+    },
+    {
+      "voice": "L'équipe, dont faisait partie Grace Hopper, trouve une panne : un papillon de nuit coincé dans un relais.",
+      "onscreen": "Un papillon dans un relais",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Ils le collent dans le journal de bord avec cette note : premier cas réel de bug trouvé.",
+      "onscreen": "« First actual case of bug »",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Le mot bug existait déjà chez les ingénieurs, mais cette page est devenue célèbre. Elle est conservée dans un musée.",
+      "onscreen": "Conservé au musée",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Le premier bug informatique était un vrai insecte 🐛",
+  "description": "L'histoire du papillon de nuit du Harvard Mark II en 1947.",
+  "hashtags": [
+    "#informatique",
+    "#histoiredelatech",
+    "#bug"
+  ],
+  "sources": [
+    {
+      "title": "Bug (informatique) — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Bug_(informatique)"
+    },
+    {
+      "title": "Software bug — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Software_bug"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "niche": "maths",
+  "topic": "Multiplier par cinq de tête",
+  "format": "mini_tuto",
+  "hook_variant": "promesse",
+  "hook": "Multiplier par cinq de tête, sans effort.",
+  "scenes": [
+    {
+      "voice": "Multiplier par cinq de tête, sans effort. Voici l'astuce.",
+      "onscreen": "× 5 sans effort",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Multiplier par cinq, c'est multiplier par dix, puis diviser par deux.",
+      "onscreen": "× 10 puis ÷ 2",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Exemple : quarante-huit fois cinq. Moitié de quarante-huit : vingt-quatre. On ajoute un zéro : deux cent quarante.",
+      "onscreen": "48 × 5 = 240",
+      "visual": {
+        "type": "bignumber",
+        "accent": "240"
+      }
+    },
+    {
+      "voice": "Avec un nombre impair : trente-sept fois cinq. Moitié : dix-huit virgule cinq. Fois dix : cent quatre-vingt-cinq.",
+      "onscreen": "37 × 5 = 185",
+      "visual": {
+        "type": "bignumber",
+        "accent": "185"
+      }
+    },
+    {
+      "voice": "À toi : quatre-vingt-six fois cinq ? Réponse en commentaire.",
+      "onscreen": "86 × 5 = ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Multiplier par 5 de tête en 1 seconde",
+  "description": "Une astuce de calcul mental : multiplier par 10 puis diviser par 2.",
+  "hashtags": [
+    "#calculmental",
+    "#maths",
+    "#astuce"
+  ],
+  "sources": [
+    {
+      "title": "Calcul mental — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Calcul_mental"
+    }
+  ]
+}

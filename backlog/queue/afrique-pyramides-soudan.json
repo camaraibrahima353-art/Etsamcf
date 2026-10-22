@@ -1,0 +1,66 @@
+{
+  "niche": "afrique",
+  "topic": "Le Soudan compte plus de pyramides que l'Égypte",
+  "format": "fait_surprenant",
+  "hook_variant": "question",
+  "hook": "Quel pays a le plus de pyramides au monde ? Ce n'est pas l'Égypte.",
+  "scenes": [
+    {
+      "voice": "Quel pays compte le plus de pyramides ? Ce n'est pas l'Égypte.",
+      "onscreen": "Pas l'Égypte ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "C'est le Soudan, avec environ deux cents pyramides, construites par les rois de Koush.",
+      "onscreen": "Le Soudan",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Les plus célèbres se trouvent à Méroé, au bord du Nil, classées au patrimoine mondial de l'UNESCO.",
+      "onscreen": "Méroé, UNESCO",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Elles sont plus petites et plus pointues que celles de Gizeh, et plus récentes de plusieurs siècles.",
+      "onscreen": "Plus petites, plus pointues",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Un trésor encore peu connu. Quel site d'Afrique veux-tu découvrir ensuite ?",
+      "onscreen": "Quel site ensuite ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Le pays aux plus de pyramides n'est pas l'Égypte",
+  "description": "Les pyramides nubiennes de Méroé, au Soudan.",
+  "hashtags": [
+    "#soudan",
+    "#afrique",
+    "#pyramides"
+  ],
+  "sources": [
+    {
+      "title": "Pyramides nubiennes — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Pyramides_nubiennes"
+    },
+    {
+      "title": "UNESCO — Sites archéologiques de l'île de Méroé",
+      "url": "https://whc.unesco.org/fr/list/1336"
+    }
+  ]
+}

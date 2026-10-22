@@ -1,0 +1,62 @@
+{
+  "niche": "finance",
+  "topic": "La règle de 72 pour savoir quand ton argent double",
+  "format": "mini_tuto",
+  "hook_variant": "promesse",
+  "hook": "Une division suffit pour savoir quand ton épargne double.",
+  "scenes": [
+    {
+      "voice": "Une division suffit pour savoir en combien de temps ton épargne double.",
+      "onscreen": "Quand ton argent double ?",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "C'est la règle de soixante-douze : divise soixante-douze par le taux annuel.",
+      "onscreen": "72 ÷ taux",
+      "visual": {
+        "type": "bignumber",
+        "accent": "72"
+      }
+    },
+    {
+      "voice": "À six pour cent par an : soixante-douze divisé par six, douze. Environ douze ans pour doubler.",
+      "onscreen": "6 % → ~12 ans",
+      "visual": {
+        "type": "list",
+        "accent": "6"
+      }
+    },
+    {
+      "voice": "À trois pour cent : vingt-quatre ans. Ça marche aussi avec l'inflation, qui divise ton pouvoir d'achat.",
+      "onscreen": "3 % → ~24 ans",
+      "visual": {
+        "type": "list",
+        "accent": "3"
+      }
+    },
+    {
+      "voice": "C'est une approximation, utile pour des taux modérés. Contenu pédagogique, pas un conseil personnalisé.",
+      "onscreen": "Une approximation",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "La règle de 72 : quand ton argent va-t-il doubler ?",
+  "description": "Une astuce de calcul mental pour estimer le temps de doublement d'un placement. Contenu pédagogique.",
+  "hashtags": [
+    "#regle72",
+    "#finance",
+    "#epargne"
+  ],
+  "sources": [
+    {
+      "title": "Règle de 72 — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/R%C3%A8gle_de_72"
+    }
+  ]
+}

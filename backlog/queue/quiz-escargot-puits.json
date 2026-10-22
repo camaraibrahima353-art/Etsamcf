@@ -1,0 +1,70 @@
+{
+  "niche": "quiz",
+  "topic": "L'énigme de l'escargot dans le puits",
+  "format": "quiz",
+  "hook_variant": "defi",
+  "hook": "Cet escargot veut sortir d'un puits. Tu trouves en combien de jours ?",
+  "scenes": [
+    {
+      "voice": "Un escargot est au fond d'un puits de dix mètres. Tu trouves en combien de jours il sort ?",
+      "onscreen": "Puits de 10 m",
+      "visual": {
+        "type": "bignumber",
+        "accent": "10 m"
+      }
+    },
+    {
+      "voice": "Chaque jour, il monte de trois mètres. Chaque nuit, il glisse et redescend de deux mètres.",
+      "onscreen": "+3 le jour, −2 la nuit",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Réfléchis bien. La réponse n'est pas dix jours.",
+      "onscreen": "Pas 10 jours…",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Chaque jour complet, il gagne un mètre. Au soir du septième jour, il est à sept mètres.",
+      "onscreen": "Jour 7 : 7 m",
+      "visual": {
+        "type": "list",
+        "accent": "7"
+      }
+    },
+    {
+      "voice": "Le huitième jour, il monte de trois mètres et sort avant de glisser. Réponse : huit jours.",
+      "onscreen": "8 jours !",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Tu avais trouvé du premier coup ? Dis-le honnêtement en commentaire.",
+      "onscreen": "Trouvé ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "L'énigme de l'escargot : la réponse n'est pas 10",
+  "description": "Une énigme de logique classique, avec la solution expliquée.",
+  "hashtags": [
+    "#enigme",
+    "#logique",
+    "#quiz"
+  ],
+  "sources": [
+    {
+      "title": "Énigme — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/%C3%89nigme"
+    }
+  ]
+}

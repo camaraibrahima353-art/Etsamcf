@@ -1,0 +1,74 @@
+{
+  "niche": "science",
+  "topic": "Un éclair est plus chaud que la surface du Soleil",
+  "format": "fait_surprenant",
+  "hook_variant": "chiffre",
+  "hook": "Un éclair est environ cinq fois plus chaud que la surface du Soleil.",
+  "scenes": [
+    {
+      "voice": "Un éclair est environ cinq fois plus chaud que la surface du Soleil.",
+      "onscreen": "× 5 plus chaud",
+      "visual": {
+        "type": "bignumber",
+        "accent": "×5"
+      }
+    },
+    {
+      "voice": "La surface du Soleil tourne autour de cinq mille cinq cents degrés.",
+      "onscreen": "Soleil : ~5 500 °C",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Le canal d'un éclair peut atteindre près de trente mille degrés, pendant une fraction de seconde.",
+      "onscreen": "Éclair : ~30 000 °C",
+      "visual": {
+        "type": "bignumber",
+        "accent": "30 000"
+      }
+    },
+    {
+      "voice": "L'air chauffé si vite se dilate brutalement : c'est ce qui produit le tonnerre.",
+      "onscreen": "Et voilà le tonnerre",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Compte les secondes entre l'éclair et le tonnerre, divise par trois : tu obtiens la distance en kilomètres.",
+      "onscreen": "Secondes ÷ 3 = km",
+      "visual": {
+        "type": "list",
+        "accent": "3"
+      }
+    },
+    {
+      "voice": "Enregistre l'astuce pour le prochain orage.",
+      "onscreen": "Enregistre l'astuce",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Un éclair est 5 fois plus chaud que le Soleil ⚡",
+  "description": "Température d'un éclair, origine du tonnerre et astuce pour estimer sa distance.",
+  "hashtags": [
+    "#eclair",
+    "#orage",
+    "#science"
+  ],
+  "sources": [
+    {
+      "title": "Foudre — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Foudre"
+    },
+    {
+      "title": "Lightning — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Lightning"
+    }
+  ]
+}

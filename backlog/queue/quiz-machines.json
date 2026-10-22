@@ -1,0 +1,62 @@
+{
+  "niche": "quiz",
+  "topic": "L'énigme des cinq machines",
+  "format": "quiz",
+  "hook_variant": "defi",
+  "hook": "Cinq machines, cinq objets, cinq minutes. Et avec cent machines ?",
+  "scenes": [
+    {
+      "voice": "Cinq machines fabriquent cinq objets en cinq minutes.",
+      "onscreen": "5 machines, 5 objets, 5 min",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Combien de temps faut-il à cent machines pour fabriquer cent objets ?",
+      "onscreen": "100 machines, 100 objets ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Si tu as pensé cent minutes, ton cerveau est allé trop vite.",
+      "onscreen": "Pas 100 minutes…",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Chaque machine fabrique un objet en cinq minutes. Cent machines en font donc cent en cinq minutes.",
+      "onscreen": "5 minutes !",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Cette question fait partie du test de réflexion cognitive. Tu as eu juste ?",
+      "onscreen": "Tu as eu juste ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Cette énigme piège ton intuition 🧠",
+  "description": "Une question du test de réflexion cognitive (Frederick, 2005).",
+  "hashtags": [
+    "#enigme",
+    "#quiz",
+    "#logique"
+  ],
+  "sources": [
+    {
+      "title": "Cognitive reflection test — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cognitive_reflection_test"
+    }
+  ]
+}

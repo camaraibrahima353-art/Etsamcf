@@ -58,3 +58,20 @@ statistique « moyenne » remplacée par « autour de » (médianes dans l'étud
    (bornés entre 0,5 et 2).
 3. Garder les 4 niches et les 2 types d'accroche les plus performants, en conservant 30 % d'exploration.
 4. Ajouter la clé API Claude pour que le scénariste écrive à partir des tendances quand la réserve est vide.
+
+## Vérification sur le serveur (GitHub Actions)
+
+| Exécution | Déclencheur | Résultat |
+|---|---|---|
+| [39731006867](https://github.com/camaraibrahima353-art/Etsamcf/actions/runs/39731006867) | manuel | ✅ 1 min 40 ; voix Piper téléchargée et mise en cache ; 2 vidéos (histoire, science) |
+| [39773054799](https://github.com/camaraibrahima353-art/Etsamcf/actions/runs/39773054799) | **planifié (cron)** | ✅ « état restauré depuis le passage 39731006867 » ; 2 nouvelles vidéos (espace, tech) ; aucun doublon ; 10 tâches, 0 échec |
+
+Remarque : GitHub retarde ou saute parfois des déclenchements planifiés en période de forte charge (le créneau de
+06:17 UTC n'a pas été exécuté, celui de 12:17 l'a été à 11:46). Les passages manqués ne font perdre aucune donnée :
+le suivant reprend la file là où elle en était.
+
+## Réserve de scripts
+
+20 scripts supplémentaires (2 par niche) ajoutés dans `backlog/queue/`, sources vérifiées par recherche web ; corrections
+apportées avant validation : origine de l'effet Zeigarnik (Kurt Lewin, Berlin), datation du « Sahara vert »,
+formulation du titre sur la tour Eiffel. Autonomie : ≈ 13 passages, soit 3 jours à 4 passages par jour.

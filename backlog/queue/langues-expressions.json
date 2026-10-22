@@ -1,0 +1,66 @@
+{
+  "niche": "langues",
+  "topic": "Trois expressions anglaises à ne pas traduire mot à mot",
+  "format": "liste",
+  "hook_variant": "question",
+  "hook": "Si un Anglais te dit casse-toi une jambe, il est gentil.",
+  "scenes": [
+    {
+      "voice": "Si un anglophone te dit casse-toi une jambe, il te veut du bien.",
+      "onscreen": "Break a leg ?!",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Break a leg veut dire bonne chance, surtout avant un spectacle.",
+      "onscreen": "break a leg = bonne chance",
+      "visual": {
+        "type": "list",
+        "accent": "1"
+      }
+    },
+    {
+      "voice": "It's raining cats and dogs : il ne pleut pas des chats, il pleut des cordes.",
+      "onscreen": "cats and dogs = des cordes",
+      "visual": {
+        "type": "list",
+        "accent": "2"
+      }
+    },
+    {
+      "voice": "A piece of cake : c'est facile, comme en français, c'est du gâteau.",
+      "onscreen": "piece of cake = facile",
+      "visual": {
+        "type": "list",
+        "accent": "3"
+      }
+    },
+    {
+      "voice": "Laquelle tu vas placer cette semaine ? Écris-la en commentaire.",
+      "onscreen": "Laquelle tu places ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "3 expressions anglaises à ne jamais traduire mot à mot",
+  "description": "Break a leg, raining cats and dogs, piece of cake.",
+  "hashtags": [
+    "#anglais",
+    "#expressions",
+    "#english"
+  ],
+  "sources": [
+    {
+      "title": "Cambridge Dictionary — break a leg",
+      "url": "https://dictionary.cambridge.org/dictionary/english/break-a-leg"
+    },
+    {
+      "title": "Cambridge Dictionary — piece of cake",
+      "url": "https://dictionary.cambridge.org/dictionary/english/piece-of-cake"
+    }
+  ]
+}

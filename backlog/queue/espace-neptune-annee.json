@@ -10,7 +10,8 @@
       "onscreen": "1 seul tour",
       "visual": {
         "type": "bignumber",
-        "accent": "1"
+        "accent": "1",
+        "query": "neptune planet"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "Neptune, 1846",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "telescope night"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "1 année = 165 ans",
       "visual": {
         "type": "bignumber",
-        "accent": "165"
+        "accent": "165",
+        "query": "solar system planets"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Premier tour : 2011",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "planet orbit"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Quelle planète ensuite ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "outer space"
       }
     }
   ],

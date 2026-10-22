@@ -10,7 +10,8 @@
       "onscreen": "Un vrai insecte",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "moth insect"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "Harvard, 1947",
       "visual": {
         "type": "bignumber",
-        "accent": "1947"
+        "accent": "1947",
+        "query": "vintage computer"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Un papillon dans un relais",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "old computer relay"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "« First actual case of bug »",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "notebook vintage"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Conservé au musée",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "computer museum"
       }
     }
   ],

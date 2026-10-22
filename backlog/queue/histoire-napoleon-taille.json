@@ -10,7 +10,8 @@
       "onscreen": "Mythe : Napoléon petit",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "napoleon statue"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "~1,69 m",
       "visual": {
         "type": "bignumber",
-        "accent": "1,69"
+        "accent": "1,69",
+        "query": "measuring tape"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Pouce français ≠ pouce anglais",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "old ruler"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "La caricature a gagné",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "political cartoon"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Ton mythe préféré ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "paris arc de triomphe"
       }
     }
   ],

@@ -10,7 +10,8 @@
       "onscreen": "× 5 plus chaud",
       "visual": {
         "type": "bignumber",
-        "accent": "×5"
+        "accent": "×5",
+        "query": "lightning strike"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "Soleil : ~5 500 °C",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "sun surface"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Éclair : ~30 000 °C",
       "visual": {
         "type": "bignumber",
-        "accent": "30 000"
+        "accent": "30 000",
+        "query": "lightning storm night"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Et voilà le tonnerre",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "thunderstorm"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Secondes ÷ 3 = km",
       "visual": {
         "type": "list",
-        "accent": "3"
+        "accent": "3",
+        "query": "storm clouds"
       }
     },
     {
@@ -50,7 +55,8 @@
       "onscreen": "Enregistre l'astuce",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "rain window"
       }
     }
   ],

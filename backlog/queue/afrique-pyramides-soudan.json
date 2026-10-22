@@ -10,7 +10,8 @@
       "onscreen": "Pas l'Égypte ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "sudan pyramids meroe"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "Le Soudan",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "meroe pyramids"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Méroé, UNESCO",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "nubian pyramids desert"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Plus petites, plus pointues",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "giza pyramids"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Quel site ensuite ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "african desert"
       }
     }
   ],

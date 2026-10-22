@@ -31,8 +31,9 @@ SCRIPT_SCHEMA = {
                     "visual": {
                         "type": "object",
                         "additionalProperties": False,
-                        "required": ["type", "accent"],
-                        "properties": {"type": {"type": "string", "enum": VISUAL_TYPES}, "accent": {"type": "string"}},
+                        "required": ["type", "accent", "query"],
+                        "properties": {"type": {"type": "string", "enum": VISUAL_TYPES}, "accent": {"type": "string"},
+                                       "query": {"type": "string", "description": "2 à 4 mots-clés EN ANGLAIS décrivant une vraie image/vidéo de la scène"}},
                     },
                 },
             },

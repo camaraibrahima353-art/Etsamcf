@@ -12,6 +12,13 @@ Sur GitHub Actions, la voix neuronale Piper (gratuite) est utilisée automatique
    `config/studio.yaml` → `voice.elevenlabs_voice_id`.
 Coût ≈ 0,05 $ par vidéo de 30 s, compté dans le budget et le tableau de bord.
 
+## Vraies images et vidéos (Pexels, gratuit)
+Chaque scène reçoit une vraie vidéo verticale (ou, à défaut, une vraie photo) cherchée avec les mots-clés `visual.query`
+du script ; l'accroche utilise toujours un média réel, sinon le QC bloque la publication (`require_real_hook_image`).
+1. Créer un compte gratuit sur pexels.com, puis https://www.pexels.com/api/ → « Your API Key ».
+2. L'ajouter en secret GitHub `PEXELS_API_KEY`.
+Licence Pexels : usage commercial gratuit, attribution facultative (le studio enregistre auteur et lien de chaque média).
+
 ## YouTube Shorts
 1. Google Cloud Console → nouveau projet → activer **YouTube Data API v3**.
 2. Écran de consentement OAuth (type Externe, vous comme utilisateur test) ; identifiants « Application de bureau ».

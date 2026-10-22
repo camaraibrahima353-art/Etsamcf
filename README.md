@@ -1,7 +1,7 @@
 # Studio IA Shorts
 
 Studio automatisé de vidéos verticales courtes (TikTok, YouTube Shorts, Facebook Reels) : recherche de tendances →
-sélection des sujets → scripts sourcés → voix et visuels → montage FFmpeg → contrôle qualité → publication via les
+sélection des sujets → scripts sourcés → voix (ElevenLabs/Piper) et vraies images/vidéos (Pexels) → montage FFmpeg → contrôle qualité → publication via les
 API officielles → analyse → amélioration. Fonctionne 24/7 sur GitHub Actions, sans machine allumée.
 
 | Document | Contenu |

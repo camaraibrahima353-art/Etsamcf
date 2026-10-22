@@ -10,7 +10,8 @@
       "onscreen": "Puits de 10 m",
       "visual": {
         "type": "bignumber",
-        "accent": "10 m"
+        "accent": "10 m",
+        "query": "snail"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "+3 le jour, −2 la nuit",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "snail climbing"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Pas 10 jours…",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "stone well"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Jour 7 : 7 m",
       "visual": {
         "type": "list",
-        "accent": "7"
+        "accent": "7",
+        "query": "snail wall"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "8 jours !",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "snail top"
       }
     },
     {
@@ -50,7 +55,8 @@
       "onscreen": "Trouvé ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "thinking question"
       }
     }
   ],

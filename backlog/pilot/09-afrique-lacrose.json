@@ -10,7 +10,8 @@
       "onscreen": "Un lac rose ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "pink lake"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "Lac Retba, Sénégal",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "senegal lake"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Une micro-algue",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "pink salt lake"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Rose en saison sèche",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "salt lake water"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Le sel récolté à la main",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "salt harvest workers"
       }
     },
     {
@@ -50,7 +55,8 @@
       "onscreen": "Quel lieu ensuite ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "desert rally car"
       }
     }
   ],

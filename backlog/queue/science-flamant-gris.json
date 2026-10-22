@@ -10,7 +10,8 @@
       "onscreen": "Né… gris ?",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "flamingo"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "Poussin gris",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "flamingo chick"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Les caroténoïdes",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "flamingo eating water"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Tu es ce que tu manges",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "pink flamingos flock"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Tu connaissais ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "flamingo zoo"
       }
     }
   ],

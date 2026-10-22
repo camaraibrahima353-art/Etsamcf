@@ -17,6 +17,7 @@ def run(db, video_id: str):
                                 max_caption_chars=cfg["quality"]["max_caption_chars_per_line"], accent=n["palette"][2],
                                 target_lufs=cfg["quality"]["target_lufs"])
     script = json.loads(v["script_json"])
-    visuals.render_thumbnail(data_dir() / "final" / f"{video_id}.jpg", script["title"], n["palette"], n.get("label", n["name"]), video_id)
+    visuals.render_thumbnail(data_dir() / "final" / f"{video_id}.jpg", script["title"], n["palette"], n.get("label", n["name"]), video_id,
+                             background=shotlist["scenes"][0].get("poster"))
     db.update_video(video_id, final_path=str(out.relative_to(data_dir())), duration_s=round(total, 2), status="edited")
     return {"file": out.name, "duration_s": round(total, 2), "size_mb": round(out.stat().st_size / 1e6, 2)}

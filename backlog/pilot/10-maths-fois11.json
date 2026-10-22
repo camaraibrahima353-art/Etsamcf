@@ -10,7 +10,8 @@
       "onscreen": "× 11 en 2 secondes",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "mental math"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "36 × 11 → 3 _ 6",
       "visual": {
         "type": "bignumber",
-        "accent": "36"
+        "accent": "36",
+        "query": "chalkboard numbers"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "3 (9) 6 = 396",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "math calculation"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Somme > 9 : retenue",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "numbers notebook"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "57 × 11 = 627",
       "visual": {
         "type": "bignumber",
-        "accent": "627"
+        "accent": "627",
+        "query": "calculator"
       }
     },
     {
@@ -50,7 +55,8 @@
       "onscreen": "48 × 11 = ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "student thinking"
       }
     }
   ],

@@ -42,6 +42,10 @@ voice:
   espeak_voice: fr-fr
   espeak_speed: 165
 
+visuals:
+  provider: auto             # auto = vraies vidéos/photos Pexels si PEXELS_API_KEY, sinon fonds procéduraux
+  prefer_video: true         # vidéo réelle d'abord, photo réelle ensuite
+
 quality:
   min_duration_s: 12
   max_duration_s: 90
@@ -50,6 +54,7 @@ quality:
   max_caption_chars_per_line: 26
   require_sources: true      # aucune affirmation factuelle sans source
   allow_robotic_voice_publish: false   # espeak-ng : autorisé en dry_run seulement
+  require_real_hook_image: true        # hors dry_run : l'accroche doit reposer sur une vraie image/vidéo
   banned_terms: ["garanti", "100% sûr", "guérit", "miracle", "devenir riche rapidement"]
 
 publishing:

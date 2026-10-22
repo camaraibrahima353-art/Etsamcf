@@ -10,7 +10,8 @@
       "onscreen": "3 cœurs. Sang bleu.",
       "visual": {
         "type": "bignumber",
-        "accent": "3"
+        "accent": "3",
+        "query": "octopus close up"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "La pieuvre",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "octopus underwater"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "2 cœurs pour les branchies",
       "visual": {
         "type": "list",
-        "accent": "2"
+        "accent": "2",
+        "query": "octopus swimming"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "1 cœur pour le corps",
       "visual": {
         "type": "list",
-        "accent": "1"
+        "accent": "1",
+        "query": "octopus reef"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Cuivre = sang bleu",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "blue water ocean"
       }
     },
     {
@@ -50,7 +55,8 @@
       "onscreen": "Elle préfère ramper",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "octopus crawling"
       }
     },
     {
@@ -58,7 +64,8 @@
       "onscreen": "Quel animal ensuite ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "octopus eye"
       }
     }
   ],

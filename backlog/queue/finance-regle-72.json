@@ -10,7 +10,8 @@
       "onscreen": "Quand ton argent double ?",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "money doubling"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "72 ÷ taux",
       "visual": {
         "type": "bignumber",
-        "accent": "72"
+        "accent": "72",
+        "query": "calculator"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "6 % → ~12 ans",
       "visual": {
         "type": "list",
-        "accent": "6"
+        "accent": "6",
+        "query": "savings jar"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "3 % → ~24 ans",
       "visual": {
         "type": "list",
-        "accent": "3"
+        "accent": "3",
+        "query": "inflation prices"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Une approximation",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "notebook calculation"
       }
     }
   ],

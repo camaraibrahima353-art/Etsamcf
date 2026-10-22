@@ -10,7 +10,8 @@
       "onscreen": "Inachevé = mémorisé",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "unfinished work desk"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "Un serveur de café",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "cafe waiter"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Payé = oublié",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "waiter restaurant"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Un effet discuté",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "tv series binge"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Commence, juste commence",
       "visual": {
         "type": "list",
-        "accent": "1"
+        "accent": "1",
+        "query": "starting work desk"
       }
     }
   ],

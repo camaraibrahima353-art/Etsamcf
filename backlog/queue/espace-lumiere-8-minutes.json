@@ -10,7 +10,8 @@
       "onscreen": "Le Soleil… du passé",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "sun space"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "150 millions de km",
       "visual": {
         "type": "bignumber",
-        "accent": "150M"
+        "accent": "150M",
+        "query": "sunlight space earth"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "≈ 8 min 20 s",
       "visual": {
         "type": "bignumber",
-        "accent": "8:20"
+        "accent": "8:20",
+        "query": "light beam"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "8 minutes de sursis",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "sunset"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Le ciel = le passé",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "starry sky milky way"
       }
     }
   ],

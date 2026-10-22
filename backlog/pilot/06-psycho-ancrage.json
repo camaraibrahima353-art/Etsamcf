@@ -10,7 +10,8 @@
       "onscreen": "Une roue truquée ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "wheel of fortune spin"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "1974 : l'expérience",
       "visual": {
         "type": "bignumber",
-        "accent": "1974"
+        "accent": "1974",
+        "query": "psychology experiment"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "10 ou 65 ?",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "roulette wheel"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "25 % contre 45 %",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "crowd thinking"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Le biais d'ancrage",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "brain illustration"
       }
     },
     {
@@ -50,7 +55,8 @@
       "onscreen": "Les prix barrés…",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "sale price tag"
       }
     }
   ],

@@ -10,7 +10,8 @@
       "onscreen": "Pourquoi elle te plaît ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "headphones music"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "Zajonc, 1968",
       "visual": {
         "type": "bignumber",
-        "accent": "1968"
+        "accent": "1968",
+        "query": "psychologist"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Exposition = préférence",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "listening music happy"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "La pub le sait",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "billboard advertising"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Ta chanson ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "singing friends"
       }
     }
   ],

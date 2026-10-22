@@ -234,3 +234,31 @@ def test_elevenlabs_engine_selection_and_request(tmp_path, monkeypatch):
     assert (tmp_path / "a.mp3").read_bytes() == b"ID3"
     monkeypatch.delenv("ELEVENLABS_API_KEY")
     assert tts.engine() in ("piper", "espeak-ng")
+
+
+def test_pexels_find_prefers_portrait_video_and_skips_used(studio, monkeypatch):
+    from studio.media import stock
+    monkeypatch.setenv("PEXELS_API_KEY", "px" * 10)
+    assert stock.available()
+    videos = {"videos": [
+        {"id": 1, "duration": 20, "url": "u1", "user": {"name": "A"}, "video_files": [{"width": 1080, "height": 1920, "file_type": "video/mp4", "link": "https://cdn/1.mp4"}]},
+        {"id": 2, "duration": 20, "url": "u2", "user": {"name": "B"}, "video_files": [
+            {"width": 1920, "height": 1080, "file_type": "video/mp4", "link": "https://cdn/2h.mp4"},
+            {"width": 1080, "height": 1920, "file_type": "video/mp4", "link": "https://cdn/2v.mp4"}]}]}
+
+    class Dl(FakeResp):
+        def __enter__(self): return self
+        def __exit__(self, *a): pass
+        def iter_content(self, n): yield b"MP4"
+
+    class S(FakeSession):
+        def get(self, url, **kw):
+            self.calls.append(("GET", url, kw))
+            return FakeResp(videos) if "api.pexels.com" in url else Dl()
+
+    s = S([])
+    m = stock.find("pyramids desert", 5, used={"v1"}, session=s)
+    assert m["id"] == "v2" and m["kind"] == "video" and m["author"] == "B"
+    assert s.calls[0][2]["params"]["orientation"] == "portrait"
+    assert s.calls[1][1] == "https://cdn/2v.mp4"  # fichier vertical choisi
+    assert open(m["path"], "rb").read() == b"MP4"

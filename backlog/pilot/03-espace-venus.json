@@ -10,7 +10,8 @@
       "onscreen": "1 rotation > 1 année",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "venus planet"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "1 année = 225 jours",
       "visual": {
         "type": "bignumber",
-        "accent": "225"
+        "accent": "225",
+        "query": "planet orbit sun"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "1 rotation = 243 jours",
       "visual": {
         "type": "bignumber",
-        "accent": "243"
+        "accent": "243",
+        "query": "planet rotation space"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Le Soleil se lève à l'ouest",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "sunrise horizon"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Lever à lever : 117 jours",
       "visual": {
         "type": "bignumber",
-        "accent": "117"
+        "accent": "117",
+        "query": "planet surface clouds"
       }
     },
     {
@@ -50,7 +55,8 @@
       "onscreen": "Ton choix ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "starry night sky"
       }
     }
   ],

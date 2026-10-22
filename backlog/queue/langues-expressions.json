@@ -10,7 +10,8 @@
       "onscreen": "Break a leg ?!",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "theater stage"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "break a leg = bonne chance",
       "visual": {
         "type": "list",
-        "accent": "1"
+        "accent": "1",
+        "query": "theater actor"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "cats and dogs = des cordes",
       "visual": {
         "type": "list",
-        "accent": "2"
+        "accent": "2",
+        "query": "heavy rain"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "piece of cake = facile",
       "visual": {
         "type": "list",
-        "accent": "3"
+        "accent": "3",
+        "query": "cake slice"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Laquelle tu places ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "friends chatting"
       }
     }
   ],

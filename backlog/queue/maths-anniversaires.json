@@ -10,7 +10,8 @@
       "onscreen": "23 personnes",
       "visual": {
         "type": "bignumber",
-        "accent": "23"
+        "accent": "23",
+        "query": "classroom students"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "365 jours pourtant",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "calendar"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Toutes les paires",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "birthday cake"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "253 paires → 50,7 %",
       "visual": {
         "type": "bignumber",
-        "accent": "253"
+        "accent": "253",
+        "query": "probability dice"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Teste-le !",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "birthday party friends"
       }
     }
   ],

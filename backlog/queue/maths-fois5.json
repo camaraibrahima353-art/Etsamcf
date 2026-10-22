@@ -10,7 +10,8 @@
       "onscreen": "× 5 sans effort",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "mental math"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "× 10 puis ÷ 2",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "math notebook"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "48 × 5 = 240",
       "visual": {
         "type": "bignumber",
-        "accent": "240"
+        "accent": "240",
+        "query": "numbers chalkboard"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "37 × 5 = 185",
       "visual": {
         "type": "bignumber",
-        "accent": "185"
+        "accent": "185",
+        "query": "calculation paper"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "86 × 5 = ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "student hand raised"
       }
     }
   ],

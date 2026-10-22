@@ -97,9 +97,19 @@ def render_video(project: dict, workdir: Path, out_mp4: Path, fps=30, max_captio
         x = f"(iw-{W})*(t/{d:.3f})" if i % 2 == 0 else f"(iw-{W})*(1-t/{d:.3f})"
         y = f"(ih-{H})*(0.5+0.5*sin(t/{d:.3f}*3.14159/2))" if i % 3 == 2 else f"(ih-{H})/2"
         clip = workdir / f"clip_{i:02d}.mp4"
-        _run(["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-framerate", str(fps), "-t", f"{d:.3f}", "-i", s["image"],
-              "-vf", f"crop={W}:{H}:x='{x}':y='{y}',fade=t=in:st=0:d=0.18,format=yuv420p",
-              "-r", str(fps), "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", str(clip)])
+        if s.get("bg_video"):
+            # vraie vidéo en fond (bouclée si trop courte) + calque texte transparent centré
+            _run(["ffmpeg", "-y", "-loglevel", "error", "-stream_loop", "-1", "-i", s["bg_video"],
+                  "-loop", "1", "-framerate", str(fps), "-i", s["image"],
+                  "-filter_complex", f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps={fps}[b];"
+                                     f"[1:v]crop={W}:{H}:(iw-{W})/2:(ih-{H})/2[o];"
+                                     f"[b][o]overlay=0:0,fade=t=in:st=0:d=0.18,format=yuv420p[v]",
+                  "-map", "[v]", "-t", f"{d:.3f}", "-r", str(fps), "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an",
+                  str(clip)])
+        else:
+            _run(["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-framerate", str(fps), "-t", f"{d:.3f}", "-i", s["image"],
+                  "-vf", f"crop={W}:{H}:x='{x}':y='{y}',fade=t=in:st=0:d=0.18,format=yuv420p",
+                  "-r", str(fps), "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-an", str(clip)])
         clips.append(clip)
     lst = workdir / "clips.txt"
     lst.write_text("".join(f"file '{c.name}'\n" for c in clips))

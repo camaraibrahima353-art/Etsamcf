@@ -10,7 +10,8 @@
       "onscreen": "3 pièges en anglais",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "english books"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "actually = en fait",
       "visual": {
         "type": "list",
-        "accent": "1"
+        "accent": "1",
+        "query": "student studying"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "library = bibliothèque",
       "visual": {
         "type": "list",
-        "accent": "2"
+        "accent": "2",
+        "query": "library books"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "sensible = raisonnable",
       "visual": {
         "type": "list",
-        "accent": "3"
+        "accent": "3",
+        "query": "friends talking"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Ton faux ami ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "london street"
       }
     }
   ],

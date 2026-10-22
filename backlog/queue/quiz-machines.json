@@ -10,7 +10,8 @@
       "onscreen": "5 machines, 5 objets, 5 min",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "factory machines"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "100 machines, 100 objets ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "factory production line"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Pas 100 minutes…",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "thinking person"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "5 minutes !",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "assembly line"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Tu as eu juste ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "brain puzzle"
       }
     }
   ],

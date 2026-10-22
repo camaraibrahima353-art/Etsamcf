@@ -95,6 +95,28 @@ def _background(palette, seed):
     return Image.alpha_composite(img.convert("RGBA"), layer), (top, mid, light)
 
 
+def _dim_layer(w, h):
+    """Voile sombre en dégradé (plus dense en haut et en bas) pour garder le texte lisible sur une vraie image."""
+    k = np.linspace(0, 1, h)[:, None]
+    alpha = 160 - 55 * np.sin(np.pi * k) + 40 * k  # ≈160 en haut, ≈125 au milieu, ≈200 en bas
+    a = np.repeat(alpha, w, axis=1).clip(0, 255).astype("uint8")
+    layer = np.zeros((h, w, 4), dtype="uint8")
+    layer[..., 3] = a
+    return Image.fromarray(layer, "RGBA")
+
+
+def _photo_background(path, palette):
+    """Photo réelle recadrée en plein cadre (cover) + voile sombre."""
+    w, h = int(W * OVER), int(H * OVER)
+    src = Image.open(path).convert("RGB")
+    scale = max(w / src.width, h / src.height)
+    src = src.resize((int(src.width * scale) + 1, int(src.height * scale) + 1), Image.LANCZOS)
+    left, top_ = (src.width - w) // 2, (src.height - h) // 2
+    img = src.crop((left, top_, left + w, top_ + h)).convert("RGBA")
+    img.alpha_composite(_dim_layer(w, h))
+    return img, tuple(_hex(c) for c in palette)
+
+
 def _shadow_text(img, xy, text, font, fill, anchor="mm"):
     sh = Image.new("RGBA", img.size, (0, 0, 0, 0))
     ImageDraw.Draw(sh).text((xy[0] + 6, xy[1] + 8), text, font=font, fill=(0, 0, 0, 170), anchor=anchor)
@@ -102,8 +124,16 @@ def _shadow_text(img, xy, text, font, fill, anchor="mm"):
     ImageDraw.Draw(img).text(xy, text, font=font, fill=fill, anchor=anchor)
 
 
-def render_scene(out: Path, onscreen: str, visual: dict, palette: list, niche_label: str, index: int, total: int, seed: str):
-    img, (top, mid, light) = _background(palette, f"{seed}-{index}")
+def render_scene(out: Path, onscreen: str, visual: dict, palette: list, niche_label: str, index: int, total: int, seed: str,
+                 background: str | None = None, overlay_only: bool = False):
+    """Image de scène. background = photo réelle ; overlay_only = calque transparent posé sur une vidéo réelle."""
+    if overlay_only:
+        w, h = int(W * OVER), int(H * OVER)
+        img, (top, mid, light) = _dim_layer(w, h), tuple(_hex(c) for c in palette)
+    elif background:
+        img, (top, mid, light) = _photo_background(background, palette)
+    else:
+        img, (top, mid, light) = _background(palette, f"{seed}-{index}")
     w, h = img.size
     ox, oy = (w - W) // 2, (h - H) // 2  # origine de la zone visible centrale
     d = ImageDraw.Draw(img)
@@ -158,15 +188,15 @@ def render_scene(out: Path, onscreen: str, visual: dict, palette: list, niche_la
         _shadow_text(img, (cx, y + i * lh + lh // 2), line, f, white)
 
     out.parent.mkdir(parents=True, exist_ok=True)
-    img.convert("RGB").save(out, quality=92)
+    (img if overlay_only else img.convert("RGB")).save(out, quality=92)
     return out
 
 
-def render_thumbnail(out: Path, title: str, palette: list, niche_label: str, seed: str):
-    """Miniature 1080x1920 (couverture) à partir du titre."""
+def render_thumbnail(out: Path, title: str, palette: list, niche_label: str, seed: str, background: str | None = None):
+    """Miniature 1080x1920 (couverture) à partir du titre, sur la vraie image de l'accroche si disponible."""
     tmp = out.with_suffix(".big.png")
     title = "".join(ch for ch in title if ord(ch) < 0x2190).strip()  # la police n'a pas d'émojis
-    render_scene(tmp, title,{"type": "title"}, palette, niche_label, 0, 1, seed + "-thumb")
+    render_scene(tmp, title, {"type": "title"}, palette, niche_label, 0, 1, seed + "-thumb", background=background)
     img = Image.open(tmp)
     w, h = img.size
     img.crop(((w - W) // 2, (h - H) // 2, (w - W) // 2 + W, (h - H) // 2 + H)).save(out, quality=90)

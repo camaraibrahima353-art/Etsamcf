@@ -17,6 +17,9 @@ Règles impératives :
   Si tu n'es pas certain d'un fait, ne l'utilise pas.
 - Aucun faux témoignage, aucun faux événement, aucun conseil financier ou médical personnalisé.
 - Français correct, phrases courtes, écrites pour être lues par une synthèse vocale (chiffres en toutes lettres si ambigu).
+- Pour chaque scène, `visual.query` : 2 à 4 mots-clés EN ANGLAIS pour trouver une vraie vidéo ou photo correspondante
+  (ex. « octopus swimming », « pink lake salt workers »). L'accroche doit avoir l'image la plus frappante. Jamais de
+  personne identifiable présentée comme liée au sujet si ce n'est pas le cas.
 - Titre <= 70 caractères, description de 1 à 2 phrases, 3 à 5 hashtags pertinents."""
 
 

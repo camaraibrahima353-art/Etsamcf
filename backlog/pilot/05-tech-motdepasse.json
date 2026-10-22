@@ -10,7 +10,8 @@
       "onscreen": "Mythe : compliqué = sûr",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "hacker laptop dark"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "P@ssw0rd!",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "password login screen"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "La longueur gagne",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "keyboard typing"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "4-5 mots au hasard",
       "visual": {
         "type": "bignumber",
-        "accent": "4-5"
+        "accent": "4-5",
+        "query": "lock security"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Recommandation NIST",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "computer security"
       }
     },
     {
@@ -50,7 +55,8 @@
       "onscreen": "Active la double authentification",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "smartphone authentication"
       }
     }
   ],

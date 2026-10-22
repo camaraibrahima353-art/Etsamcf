@@ -10,7 +10,8 @@
       "onscreen": "La guerre la plus courte ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "zanzibar stone town"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "27 août 1896",
       "visual": {
         "type": "bignumber",
-        "accent": "1896"
+        "accent": "1896",
+        "query": "zanzibar coast"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Un ultimatum",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "old palace"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "9 h : bombardement",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "warship sea"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "38 à 45 minutes",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "clock time passing"
       }
     },
     {
@@ -50,7 +55,8 @@
       "onscreen": "Plus courte qu'un épisode",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "history old map"
       }
     }
   ],

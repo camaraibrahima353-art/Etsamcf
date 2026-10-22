@@ -10,7 +10,8 @@
       "onscreen": "3 nouveaux pièges",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "english class"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "eventually = finalement",
       "visual": {
         "type": "list",
-        "accent": "1"
+        "accent": "1",
+        "query": "finally finish line"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "attend = assister à",
       "visual": {
         "type": "list",
-        "accent": "2"
+        "accent": "2",
+        "query": "conference audience"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "pretend = faire semblant",
       "visual": {
         "type": "list",
-        "accent": "3"
+        "accent": "3",
+        "query": "acting pretend"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Score sur 3 ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "students quiz"
       }
     }
   ],

@@ -10,7 +10,8 @@
       "onscreen": "La règle 50 / 30 / 20",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "salary money wallet"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "50 % : les besoins",
       "visual": {
         "type": "list",
-        "accent": "50"
+        "accent": "50",
+        "query": "rent house keys"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "30 % : les envies",
       "visual": {
         "type": "list",
-        "accent": "30"
+        "accent": "30",
+        "query": "friends restaurant"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "20 % : épargne",
       "visual": {
         "type": "list",
-        "accent": "20"
+        "accent": "20",
+        "query": "piggy bank savings"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Un repère, pas une loi",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "budget notebook"
       }
     },
     {
@@ -50,7 +55,8 @@
       "onscreen": "Écris « budget »",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "calculator money"
       }
     }
   ],

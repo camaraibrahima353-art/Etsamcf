@@ -10,7 +10,8 @@
       "onscreen": "Le Sahara… vert ?",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "sahara desert dunes"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "≈ 9 millions de km²",
       "visual": {
         "type": "bignumber",
-        "accent": "9M"
+        "accent": "9M",
+        "query": "sahara aerial"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Prairies et lacs",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "green savanna lake"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Des girafes peintes",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "rock art"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Tu le savais ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "desert sunset"
       }
     }
   ],

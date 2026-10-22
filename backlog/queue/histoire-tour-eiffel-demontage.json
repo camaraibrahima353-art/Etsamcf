@@ -10,7 +10,8 @@
       "onscreen": "Elle devait disparaître",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "eiffel tower"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "1889",
       "visual": {
         "type": "bignumber",
-        "accent": "1889"
+        "accent": "1889",
+        "query": "eiffel tower vintage"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Une concession de 20 ans",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "paris 1889"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Jugée affreuse",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "eiffel tower structure"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Sauvée par la radio",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "radio antenna"
       }
     },
     {
@@ -50,7 +55,8 @@
       "onscreen": "Tu l'as déjà vue ?",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "eiffel tower night"
       }
     }
   ],

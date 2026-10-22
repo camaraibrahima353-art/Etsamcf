@@ -10,7 +10,8 @@
       "onscreen": "1 000 € à 5 %",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "coins stack growing"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "Simples : 1 500 €",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "coins"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Les intérêts font des petits",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "snowball"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Composés : ≈ 1 629 €",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "money growth chart"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Le temps est ton allié",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "clock money"
       }
     }
   ],

@@ -10,7 +10,8 @@
       "onscreen": "Cadenas = site fiable ?",
       "visual": {
         "type": "title",
-        "accent": ""
+        "accent": "",
+        "query": "browser padlock"
       }
     },
     {
@@ -18,7 +19,8 @@
       "onscreen": "Connexion chiffrée",
       "visual": {
         "type": "text",
-        "accent": ""
+        "accent": "",
+        "query": "encryption data"
       }
     },
     {
@@ -26,7 +28,8 @@
       "onscreen": "Le site peut mentir",
       "visual": {
         "type": "reveal",
-        "accent": ""
+        "accent": "",
+        "query": "hacker phishing"
       }
     },
     {
@@ -34,7 +37,8 @@
       "onscreen": "Vérifie l'adresse",
       "visual": {
         "type": "list",
-        "accent": "1"
+        "accent": "1",
+        "query": "phone scam message"
       }
     },
     {
@@ -42,7 +46,8 @@
       "onscreen": "Partage l'astuce",
       "visual": {
         "type": "question",
-        "accent": ""
+        "accent": "",
+        "query": "sharing phone"
       }
     }
   ],

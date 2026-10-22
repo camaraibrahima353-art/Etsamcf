@@ -1,0 +1,82 @@
+{
+  "niche": "science",
+  "topic": "La pieuvre a trois cœurs et du sang bleu",
+  "format": "fait_surprenant",
+  "hook_variant": "chiffre",
+  "hook": "Cet animal a trois cœurs, et son sang est bleu.",
+  "scenes": [
+    {
+      "voice": "Cet animal a trois cœurs, et son sang est bleu.",
+      "onscreen": "3 cœurs. Sang bleu.",
+      "visual": {
+        "type": "bignumber",
+        "accent": "3"
+      }
+    },
+    {
+      "voice": "C'est la pieuvre. Et ses trois cœurs n'ont pas le même travail.",
+      "onscreen": "La pieuvre",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Deux petits cœurs envoient le sang dans les branchies, pour capter l'oxygène.",
+      "onscreen": "2 cœurs pour les branchies",
+      "visual": {
+        "type": "list",
+        "accent": "2"
+      }
+    },
+    {
+      "voice": "Le troisième pompe le sang vers tout le reste du corps.",
+      "onscreen": "1 cœur pour le corps",
+      "visual": {
+        "type": "list",
+        "accent": "1"
+      }
+    },
+    {
+      "voice": "Et ce sang est bleu, car il transporte l'oxygène grâce au cuivre, et non au fer comme le nôtre.",
+      "onscreen": "Cuivre = sang bleu",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Détail fou : quand elle nage, ce cœur principal s'arrête presque. Voilà pourquoi elle préfère ramper.",
+      "onscreen": "Elle préfère ramper",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Tu connaissais ce secret ? Dis-moi en commentaire quel animal on explore ensuite.",
+      "onscreen": "Quel animal ensuite ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "La pieuvre a 3 cœurs (et du sang bleu) 🐙",
+  "description": "Pourquoi la pieuvre a-t-elle trois cœurs et un sang bleu ? Explication en 30 secondes.",
+  "hashtags": [
+    "#pieuvre",
+    "#animaux",
+    "#science"
+  ],
+  "sources": [
+    {
+      "title": "Octopus — Wikipedia (circulatory system)",
+      "url": "https://en.wikipedia.org/wiki/Octopus"
+    },
+    {
+      "title": "Hémocyanine — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/H%C3%A9mocyanine"
+    }
+  ]
+}

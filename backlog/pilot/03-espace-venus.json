@@ -1,0 +1,74 @@
+{
+  "niche": "espace",
+  "topic": "Sur Vénus, une rotation dure plus longtemps qu'une année",
+  "format": "fait_surprenant",
+  "hook_variant": "affirmation_choc",
+  "hook": "Sur cette planète, faire un tour sur soi-même prend plus longtemps qu'une année.",
+  "scenes": [
+    {
+      "voice": "Sur cette planète, faire un tour sur soi-même prend plus longtemps qu'une année.",
+      "onscreen": "1 rotation > 1 année",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "C'est Vénus. Elle met environ deux cent vingt-cinq jours terrestres pour faire le tour du Soleil.",
+      "onscreen": "1 année = 225 jours",
+      "visual": {
+        "type": "bignumber",
+        "accent": "225"
+      }
+    },
+    {
+      "voice": "Mais pour tourner une seule fois sur elle-même, il lui faut environ deux cent quarante-trois jours.",
+      "onscreen": "1 rotation = 243 jours",
+      "visual": {
+        "type": "bignumber",
+        "accent": "243"
+      }
+    },
+    {
+      "voice": "Et ce n'est pas tout : elle tourne à l'envers. Là-bas, le Soleil se lève à l'ouest.",
+      "onscreen": "Le Soleil se lève à l'ouest",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Attention, avec ce sens inversé, d'un lever de Soleil au suivant, il ne s'écoule qu'environ cent dix-sept jours.",
+      "onscreen": "Lever à lever : 117 jours",
+      "visual": {
+        "type": "bignumber",
+        "accent": "117"
+      }
+    },
+    {
+      "voice": "Alors, tu préférerais un anniversaire par jour, ou un jour qui dure toute l'année ? Réponds en commentaire.",
+      "onscreen": "Ton choix ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Sur Vénus, une rotation dure plus qu'une année 🪐",
+  "description": "Rotation lente et rétrograde : les étrangetés du temps sur Vénus.",
+  "hashtags": [
+    "#venus",
+    "#espace",
+    "#astronomie"
+  ],
+  "sources": [
+    {
+      "title": "Vénus (planète) — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/V%C3%A9nus_(plan%C3%A8te)"
+    },
+    {
+      "title": "Venus — NASA Science",
+      "url": "https://science.nasa.gov/venus/"
+    }
+  ]
+}

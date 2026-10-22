@@ -1,0 +1,74 @@
+{
+  "niche": "psycho",
+  "topic": "Le biais d'ancrage et l'expérience de la roue",
+  "format": "histoire",
+  "hook_variant": "question",
+  "hook": "Une roue truquée peut-elle changer ton jugement ?",
+  "scenes": [
+    {
+      "voice": "Une roue truquée peut-elle changer ton jugement ?",
+      "onscreen": "Une roue truquée ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "En mil neuf cent soixante-quatorze, deux psychologues, Tversky et Kahneman, font tourner une roue devant des participants.",
+      "onscreen": "1974 : l'expérience",
+      "visual": {
+        "type": "bignumber",
+        "accent": "1974"
+      }
+    },
+    {
+      "voice": "La roue s'arrête sur dix, ou sur soixante-cinq. Puis on demande : quel pourcentage des pays de l'ONU sont africains ?",
+      "onscreen": "10 ou 65 ?",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Ceux qui ont vu dix estiment autour de vingt-cinq pour cent. Ceux qui ont vu soixante-cinq, autour de quarante-cinq.",
+      "onscreen": "25 % contre 45 %",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Un nombre sans aucun rapport a influencé leur estimation. C'est le biais d'ancrage.",
+      "onscreen": "Le biais d'ancrage",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Les soldes à prix barrés utilisent ce mécanisme. Tu l'avais remarqué ?",
+      "onscreen": "Les prix barrés…",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Ce biais manipule tes décisions sans que tu le saches 🧠",
+  "description": "L'expérience de la roue de Tversky et Kahneman (1974) expliquée simplement.",
+  "hashtags": [
+    "#psychologie",
+    "#biaiscognitifs",
+    "#cerveau"
+  ],
+  "sources": [
+    {
+      "title": "Biais d'ancrage — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Biais_d%27ancrage"
+    },
+    {
+      "title": "Tversky & Kahneman (1974), Judgment under Uncertainty — Science",
+      "url": "https://www.science.org/doi/10.1126/science.185.4157.1124"
+    }
+  ]
+}

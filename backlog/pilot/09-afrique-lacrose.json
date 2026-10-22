@@ -1,0 +1,74 @@
+{
+  "niche": "afrique",
+  "topic": "Le lac Rose du Sénégal",
+  "format": "fait_surprenant",
+  "hook_variant": "question",
+  "hook": "Pourquoi ce lac du Sénégal est-il rose ?",
+  "scenes": [
+    {
+      "voice": "Pourquoi ce lac du Sénégal est-il rose ?",
+      "onscreen": "Un lac rose ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "C'est le lac Retba, surnommé le lac Rose, à une trentaine de kilomètres de Dakar.",
+      "onscreen": "Lac Retba, Sénégal",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Son eau est extrêmement salée. Une micro-algue, Dunaliella salina, y prospère et produit un pigment rouge.",
+      "onscreen": "Une micro-algue",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Selon la lumière et la saison, l'eau passe du rose au mauve, surtout en saison sèche.",
+      "onscreen": "Rose en saison sèche",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Des centaines de travailleurs y récoltent le sel à la main, en se protégeant la peau avec du beurre de karité.",
+      "onscreen": "Le sel récolté à la main",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Et jusqu'en deux mille sept, c'était la ligne d'arrivée du rallye Paris-Dakar. Quel lieu d'Afrique veux-tu découvrir ensuite ?",
+      "onscreen": "Quel lieu ensuite ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Ce lac du Sénégal est rose, voici pourquoi 🇸🇳",
+  "description": "Le lac Retba et sa micro-algue : un trésor naturel près de Dakar.",
+  "hashtags": [
+    "#senegal",
+    "#afrique",
+    "#lacrose"
+  ],
+  "sources": [
+    {
+      "title": "Lac Rose — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Lac_Rose"
+    },
+    {
+      "title": "Dunaliella salina — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Dunaliella_salina"
+    }
+  ]
+}

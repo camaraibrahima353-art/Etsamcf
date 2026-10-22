@@ -1,0 +1,70 @@
+{
+  "niche": "quiz",
+  "topic": "L'énigme de la batte et de la balle",
+  "format": "quiz",
+  "hook_variant": "defi",
+  "hook": "Plus de la moitié des étudiants de grandes universités se trompent à cette question.",
+  "scenes": [
+    {
+      "voice": "Plus de la moitié des étudiants de grandes universités se trompent à cette question. Prêt ?",
+      "onscreen": "Prêt pour le défi ?",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Une batte et une balle coûtent un euro dix au total.",
+      "onscreen": "Batte + balle = 1,10 €",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "La batte coûte un euro de plus que la balle. Combien coûte la balle ?",
+      "onscreen": "Combien coûte la balle ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Si tu as pensé dix centimes, ce n'est pas la bonne réponse. Réfléchis encore trois secondes.",
+      "onscreen": "Pas 10 centimes…",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "La balle coûte cinq centimes. La batte coûte un euro cinq. Total : un euro dix.",
+      "onscreen": "5 centimes !",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Cette question vient du test de réflexion cognitive de Shane Frederick. Tu avais trouvé ?",
+      "onscreen": "Tu avais trouvé ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "La plupart des gens ratent cette énigme simple 🧩",
+  "description": "L'énigme de la batte et de la balle, issue du test de réflexion cognitive (Frederick, 2005).",
+  "hashtags": [
+    "#enigme",
+    "#quiz",
+    "#logique"
+  ],
+  "sources": [
+    {
+      "title": "Cognitive reflection test — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cognitive_reflection_test"
+    }
+  ]
+}

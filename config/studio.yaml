@@ -1,0 +1,61 @@
+# Configuration principale du studio. Les secrets ne vont JAMAIS ici :
+# ils sont lus depuis les variables d'environnement (secrets GitHub Actions ou .env local).
+
+studio:
+  name: "Studio IA Shorts"
+  language: fr
+  data_dir: data            # base SQLite, médias, vidéos finales, journaux
+
+production:
+  videos_per_run: 2          # vidéos produites au maximum par passage de l'ordonnanceur
+  max_videos_per_day: 10     # plafond quotidien (montée en charge progressive selon les résultats)
+  target_duration_s: [20, 60]
+  fps: 30
+  width: 1080
+  height: 1920
+  min_backlog_alert: 3       # alerte quand il reste moins de N scripts en attente
+
+budget:                      # en USD ; dépassement => pause automatique (kill switch)
+  daily_usd: 2.00
+  monthly_usd: 30.00
+  per_video_usd: 0.50
+
+# Coûts unitaires utilisés pour l'estimation (voir docs/RESEARCH.md §7 ; à ajuster).
+unit_costs:
+  llm_script_usd: 0.05       # 1 script ≈ 2-3k tokens entrée + 2k sortie (claude-opus-5-5 : 4 $/20 $ par MTok)
+  llm_trends_usd: 0.03
+  tts_local_usd: 0.0         # Piper / espeak-ng en local
+  tts_cloud_per_1k_chars_usd: 0.015
+  visuals_procedural_usd: 0.0
+  compute_per_video_usd: 0.0 # GitHub Actions : gratuit dans le quota (dépôt public ou 2000 min/mois)
+
+retry:
+  max_attempts: 3
+  backoff_base_s: 60          # 60 s, 120 s, 240 s...
+  stale_lock_minutes: 30      # une tâche "running" plus vieille est considérée bloquée et relancée
+
+voice:
+  engine: auto               # auto = piper si un modèle est présent, sinon espeak-ng
+  piper_model: models/fr_FR-siwis-medium.onnx
+  espeak_voice: fr-fr
+  espeak_speed: 165
+
+quality:
+  min_duration_s: 12
+  max_duration_s: 90
+  target_lufs: -14
+  lufs_tolerance: 2.5
+  max_caption_chars_per_line: 26
+  require_sources: true      # aucune affirmation factuelle sans source
+  banned_terms: ["garanti", "100% sûr", "guérit", "miracle", "devenir riche rapidement"]
+
+publishing:
+  mode: dry_run              # dry_run | private | public  (public exige audit TikTok / YouTube)
+  ai_disclosure: true        # mention IA obligatoire (TikTok is_aigc, YouTube containsSyntheticMedia)
+  platforms:
+    youtube:  {enabled: true,  daily_quota_units: 10000, upload_cost_units: 1600}
+    tiktok:   {enabled: true,  max_posts_per_day: 5}
+    facebook: {enabled: true,  max_posts_per_day: 5}
+  schedule_slots_utc: ["11:00", "17:00", "20:00"]
+
+niches_file: config/niches.yaml

@@ -1,0 +1,84 @@
+# Les 10 niches du pilote (justification complète : docs/RESEARCH.md §5).
+# priority : poids initial de sélection (le stratège le réajuste selon les performances).
+# risk : niveau de risque de désinformation => sévérité du contrôle qualité.
+niches:
+  - id: science
+    label: "Science"
+    name: "Science étonnante"
+    audience: "15-35 ans curieux, francophones"
+    palette: ["#0B1D3A", "#1F6FEB", "#7CC4FF"]
+    hashtags: ["#science", "#lesaviezvous", "#apprendresurtiktok", "#culturegenerale"]
+    priority: 1.0
+    risk: medium
+  - id: histoire
+    label: "Histoire"
+    name: "Histoire express"
+    audience: "18-45 ans, amateurs d'anecdotes"
+    palette: ["#2B1B0E", "#B5651D", "#F2C14E"]
+    hashtags: ["#histoire", "#anecdote", "#culture", "#lesaviezvous"]
+    priority: 1.0
+    risk: medium
+  - id: espace
+    label: "Espace"
+    name: "Mystères de l'espace"
+    audience: "13-35 ans, passionnés d'astronomie"
+    palette: ["#05010F", "#4B2A8C", "#C9A7FF"]
+    hashtags: ["#espace", "#astronomie", "#univers", "#science"]
+    priority: 1.0
+    risk: low
+  - id: finance
+    label: "Argent malin"
+    name: "Argent malin (finance personnelle pédagogique)"
+    audience: "18-35 ans, premiers salaires, Afrique francophone et Europe"
+    palette: ["#0E2A1F", "#1E8449", "#A9DFBF"]
+    hashtags: ["#financepersonnelle", "#epargne", "#budget", "#argent"]
+    priority: 0.9
+    risk: high          # jamais de conseil d'investissement personnalisé
+  - id: tech_ia
+    label: "Tech & IA"
+    name: "Tech & IA utiles"
+    audience: "16-40 ans, étudiants et actifs"
+    palette: ["#0D0D0D", "#00A884", "#7CF3D0"]
+    hashtags: ["#ia", "#tech", "#astuce", "#productivite"]
+    priority: 1.0
+    risk: medium
+  - id: psycho
+    label: "Psycho"
+    name: "Psychologie & biais cognitifs"
+    audience: "18-40 ans, développement personnel"
+    palette: ["#2A0E2E", "#9B3D8F", "#F5B7E8"]
+    hashtags: ["#psychologie", "#biaiscognitifs", "#cerveau", "#mental"]
+    priority: 0.9
+    risk: medium
+  - id: langues
+    label: "Anglais"
+    name: "Anglais en 30 secondes"
+    audience: "12-40 ans, apprenants francophones"
+    palette: ["#0A2342", "#C0392B", "#F4F4F4"]
+    hashtags: ["#anglais", "#apprendrelanglais", "#english", "#vocabulaire"]
+    priority: 0.9
+    risk: low
+  - id: quiz
+    label: "Quiz"
+    name: "Quiz & énigmes"
+    audience: "10-35 ans, jeux de logique"
+    palette: ["#1B1B3A", "#F39C12", "#FFE29A"]
+    hashtags: ["#quiz", "#enigme", "#logique", "#defi"]
+    priority: 1.0
+    risk: low
+  - id: afrique
+    label: "Afrique"
+    name: "Afrique méconnue (géographie & patrimoine)"
+    audience: "15-45 ans, diaspora et Afrique francophone"
+    palette: ["#3B1F0B", "#D35400", "#F9D56E"]
+    hashtags: ["#afrique", "#geographie", "#patrimoine", "#culture"]
+    priority: 1.0
+    risk: medium
+  - id: maths
+    label: "Maths"
+    name: "Maths satisfaisantes"
+    audience: "13-35 ans, élèves et curieux"
+    palette: ["#101820", "#FEE715", "#FFFFFF"]
+    hashtags: ["#maths", "#satisfaisant", "#astuce", "#calculmental"]
+    priority: 0.8
+    risk: low

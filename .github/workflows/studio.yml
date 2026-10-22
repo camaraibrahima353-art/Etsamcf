@@ -1,0 +1,134 @@
+# Ordonnanceur 24/7 du studio : un passage toutes les 6 heures + déclenchement manuel.
+# L'état (base SQLite, rapports, journaux) passe d'une exécution à l'autre sous forme d'artefact « studio-state ».
+name: studio
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"      # 00:17, 06:17, 12:17, 18:17 UTC
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "run | pause | resume | stop | status"
+        default: run
+        type: choice
+        options: [run, pause, resume, stop, status]
+      videos:
+        description: "nombre maximum de vidéos pour ce passage (vide = config)"
+        required: false
+        default: ""
+
+concurrency:
+  group: studio            # jamais deux passages en parallèle
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  actions: read            # récupérer l'artefact d'état du passage précédent
+  issues: write            # alertes critiques -> issues
+
+jobs:
+  studio:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      STUDIO_STATE: ${{ vars.STUDIO_STATE }}                 # variable de dépôt : running | paused | stopped
+      STUDIO_PUBLISH_MODE: ${{ vars.STUDIO_PUBLISH_MODE || 'dry_run' }}
+      TIKTOK_MODE: ${{ vars.TIKTOK_MODE || 'inbox' }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+      TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+      TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+      FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Dépendances système
+        run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg espeak-ng fonts-inter
+
+      - name: Dépendances Python
+        run: pip install -r requirements.txt
+
+      - name: Voix Piper (cache)
+        uses: actions/cache@v4
+        with:
+          path: models
+          key: piper-fr_FR-siwis-medium-v1
+
+      - name: Télécharger la voix si absente
+        run: |
+          if [ ! -f models/fr_FR-siwis-medium.onnx ]; then
+            python -m piper.download_voices fr_FR-siwis-medium --download-dir models || echo "::warning::voix Piper indisponible, repli sur espeak-ng"
+          fi
+
+      - name: Restaurer l'état du passage précédent
+        run: |
+          mkdir -p data
+          for id in $(gh run list -R "$GITHUB_REPOSITORY" -w studio.yml -s completed -L 10 --json databaseId -q '.[].databaseId'); do
+            if gh run download "$id" -R "$GITHUB_REPOSITORY" -n studio-state -D data 2>/dev/null; then
+              echo "état restauré depuis le passage $id"; break
+            fi
+          done
+          ls -la data || true
+
+      - name: Exécuter
+        id: exec
+        run: |
+          touch .run-start
+          ACTION="${{ inputs.action || 'run' }}"
+          if [ "$ACTION" = "run" ]; then
+            ARGS=""
+            [ -n "${{ inputs.videos }}" ] && ARGS="--videos ${{ inputs.videos }}"
+            python -m studio run $ARGS
+          else
+            python -m studio "$ACTION"
+          fi
+          python -m studio dashboard
+          python -m studio alerts
+
+      - name: Résumé
+        if: always()
+        run: cat data/reports/daily-*.md 2>/dev/null | tail -n 60 >> "$GITHUB_STEP_SUMMARY" || true
+
+      - name: Sauvegarder l'état
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: studio-state
+          retention-days: 90
+          include-hidden-files: true
+          path: |
+            data/studio.db
+            data/research
+            data/scripts
+            data/stats
+            data/reports
+            data/publications
+            data/logs
+
+      - name: Lister les nouvelles vidéos
+        if: always()
+        run: |
+          mkdir -p out
+          find data/final -newer .run-start -type f \( -name '*.mp4' -o -name '*.jpg' \) -exec cp {} out/ \; 2>/dev/null || true
+          ls -la out
+
+      - name: Publier les vidéos du passage (artefact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: videos-${{ github.run_id }}
+          retention-days: 30
+          if-no-files-found: ignore
+          path: out/

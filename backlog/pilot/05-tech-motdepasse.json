@@ -1,0 +1,74 @@
+{
+  "niche": "tech_ia",
+  "topic": "Phrase de passe longue contre mot de passe compliqué",
+  "format": "mythe_realite",
+  "hook_variant": "mythe",
+  "hook": "Ton mot de passe compliqué est peut-être le plus facile à pirater.",
+  "scenes": [
+    {
+      "voice": "Ton mot de passe compliqué est peut-être le plus facile à pirater.",
+      "onscreen": "Mythe : compliqué = sûr",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Remplacer des lettres par des symboles, les logiciels d'attaque le testent en premier.",
+      "onscreen": "P@ssw0rd!",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Ce qui compte surtout, c'est la longueur. Chaque caractère ajouté multiplie les combinaisons.",
+      "onscreen": "La longueur gagne",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Une phrase de passe de quatre ou cinq mots choisis au hasard est longue, et facile à retenir.",
+      "onscreen": "4-5 mots au hasard",
+      "visual": {
+        "type": "bignumber",
+        "accent": "4-5"
+      }
+    },
+    {
+      "voice": "L'institut américain NIST recommande d'ailleurs de privilégier la longueur plutôt que des règles de composition.",
+      "onscreen": "Recommandation NIST",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Et surtout, active la double authentification. Enregistre cette vidéo pour la retrouver.",
+      "onscreen": "Active la double authentification",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Ton mot de passe compliqué n'est pas si sûr 🔐",
+  "description": "Longueur, phrases de passe et double authentification : ce que recommandent les experts.",
+  "hashtags": [
+    "#cybersecurite",
+    "#motdepasse",
+    "#astuce"
+  ],
+  "sources": [
+    {
+      "title": "NIST SP 800-63B — Digital Identity Guidelines",
+      "url": "https://pages.nist.gov/800-63-3/sp800-63b.html"
+    },
+    {
+      "title": "Mot de passe — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Mot_de_passe"
+    }
+  ]
+}

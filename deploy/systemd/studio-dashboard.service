@@ -1,0 +1,13 @@
+[Unit]
+Description=Studio IA Shorts - tableau de bord local (127.0.0.1:8765, accès par tunnel SSH)
+After=network.target
+
+[Service]
+User=studio
+WorkingDirectory=/opt/studio
+ExecStart=/opt/studio/.venv/bin/python -m studio serve --port 8765
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

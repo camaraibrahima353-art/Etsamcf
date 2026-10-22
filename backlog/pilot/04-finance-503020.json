@@ -1,0 +1,74 @@
+{
+  "niche": "finance",
+  "topic": "La règle budgétaire 50/30/20 expliquée",
+  "format": "mini_tuto",
+  "hook_variant": "promesse",
+  "hook": "Une règle simple pour savoir où va ton salaire.",
+  "scenes": [
+    {
+      "voice": "Une règle simple pour savoir où va ton salaire. Elle s'appelle cinquante, trente, vingt.",
+      "onscreen": "La règle 50 / 30 / 20",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Cinquante pour cent pour les besoins : logement, nourriture, transport, factures.",
+      "onscreen": "50 % : les besoins",
+      "visual": {
+        "type": "list",
+        "accent": "50"
+      }
+    },
+    {
+      "voice": "Trente pour cent pour les envies : sorties, loisirs, achats plaisir.",
+      "onscreen": "30 % : les envies",
+      "visual": {
+        "type": "list",
+        "accent": "30"
+      }
+    },
+    {
+      "voice": "Vingt pour cent pour l'épargne ou le remboursement de dettes.",
+      "onscreen": "20 % : épargne",
+      "visual": {
+        "type": "list",
+        "accent": "20"
+      }
+    },
+    {
+      "voice": "Ce n'est qu'un point de départ : adapte les proportions à ta situation. Contenu pédagogique, pas un conseil personnalisé.",
+      "onscreen": "Un repère, pas une loi",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Tu veux la version pour un petit salaire ? Écris budget en commentaire.",
+      "onscreen": "Écris « budget »",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "La règle 50/30/20 pour gérer ton salaire",
+  "description": "Une méthode de budget popularisée par Elizabeth Warren. Contenu pédagogique, pas un conseil financier personnalisé.",
+  "hashtags": [
+    "#budget",
+    "#argent",
+    "#epargne"
+  ],
+  "sources": [
+    {
+      "title": "50/30/20 budget rule — Investopedia",
+      "url": "https://www.investopedia.com/ask/answers/022916/what-502030-budget-rule.asp"
+    },
+    {
+      "title": "Elizabeth Warren — Wikipedia (All Your Worth, 2005)",
+      "url": "https://en.wikipedia.org/wiki/Elizabeth_Warren"
+    }
+  ]
+}

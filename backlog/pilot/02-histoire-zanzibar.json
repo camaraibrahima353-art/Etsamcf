@@ -1,0 +1,70 @@
+{
+  "niche": "histoire",
+  "topic": "La guerre anglo-zanzibarite, la plus courte de l'histoire",
+  "format": "histoire",
+  "hook_variant": "question",
+  "hook": "Combien de temps a duré la guerre la plus courte de l'histoire ?",
+  "scenes": [
+    {
+      "voice": "Combien de temps a duré la guerre la plus courte de l'histoire ?",
+      "onscreen": "La guerre la plus courte ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Nous sommes le vingt-sept août mil huit cent quatre-vingt-seize, à Zanzibar, au large de l'Afrique de l'Est.",
+      "onscreen": "27 août 1896",
+      "visual": {
+        "type": "bignumber",
+        "accent": "1896"
+      }
+    },
+    {
+      "voice": "Le nouveau sultan refuse de quitter le palais, malgré l'ultimatum britannique.",
+      "onscreen": "Un ultimatum",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "À neuf heures, les navires britanniques ouvrent le feu sur le palais.",
+      "onscreen": "9 h : bombardement",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Moins d'une heure plus tard, c'est fini. Entre trente-huit et quarante-cinq minutes selon les sources.",
+      "onscreen": "38 à 45 minutes",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Une guerre plus courte qu'un épisode de série. Tu veux d'autres records de l'histoire ? Abonne-toi.",
+      "onscreen": "Plus courte qu'un épisode",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "La guerre la plus courte de l'histoire a duré... 38 minutes",
+  "description": "Le 27 août 1896, Zanzibar et le Royaume-Uni s'affrontent. Récit express.",
+  "hashtags": [
+    "#histoire",
+    "#zanzibar",
+    "#anecdote"
+  ],
+  "sources": [
+    {
+      "title": "Guerre anglo-zanzibarite — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Guerre_anglo-zanzibarite"
+    }
+  ]
+}

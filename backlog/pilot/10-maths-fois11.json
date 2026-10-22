@@ -1,0 +1,74 @@
+{
+  "niche": "maths",
+  "topic": "Multiplier un nombre à deux chiffres par 11 de tête",
+  "format": "mini_tuto",
+  "hook_variant": "promesse",
+  "hook": "Multiplie n'importe quel nombre à deux chiffres par onze en deux secondes.",
+  "scenes": [
+    {
+      "voice": "Multiplie n'importe quel nombre à deux chiffres par onze en deux secondes.",
+      "onscreen": "× 11 en 2 secondes",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Exemple : trente-six fois onze. Écarte les deux chiffres : trois, puis six.",
+      "onscreen": "36 × 11 → 3 _ 6",
+      "visual": {
+        "type": "bignumber",
+        "accent": "36"
+      }
+    },
+    {
+      "voice": "Au milieu, mets leur somme : trois plus six, neuf. Résultat : trois cent quatre-vingt-seize.",
+      "onscreen": "3 (9) 6 = 396",
+      "visual": {
+        "type": "reveal",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Si la somme dépasse neuf, garde l'unité au milieu et ajoute un au premier chiffre.",
+      "onscreen": "Somme > 9 : retenue",
+      "visual": {
+        "type": "text",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Cinquante-sept fois onze : cinq plus sept, douze. On garde deux, et cinq devient six. Six cent vingt-sept.",
+      "onscreen": "57 × 11 = 627",
+      "visual": {
+        "type": "bignumber",
+        "accent": "627"
+      }
+    },
+    {
+      "voice": "À toi : quarante-huit fois onze ? Réponse en commentaire.",
+      "onscreen": "48 × 11 = ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "Multiplier par 11 de tête en 2 secondes ✖️",
+  "description": "Une astuce de calcul mental pour multiplier un nombre à deux chiffres par 11.",
+  "hashtags": [
+    "#calculmental",
+    "#maths",
+    "#astuce"
+  ],
+  "sources": [
+    {
+      "title": "Calcul mental — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Calcul_mental"
+    },
+    {
+      "title": "Multiplication algorithm — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Multiplication_algorithm"
+    }
+  ]
+}

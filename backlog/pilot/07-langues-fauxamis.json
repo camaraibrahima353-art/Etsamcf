@@ -1,0 +1,66 @@
+{
+  "niche": "langues",
+  "topic": "Trois faux amis anglais que tout le monde confond",
+  "format": "liste",
+  "hook_variant": "defi",
+  "hook": "Trois mots anglais que presque tous les francophones utilisent mal.",
+  "scenes": [
+    {
+      "voice": "Trois mots anglais que presque tous les francophones utilisent mal. Tu en connais combien ?",
+      "onscreen": "3 pièges en anglais",
+      "visual": {
+        "type": "title",
+        "accent": ""
+      }
+    },
+    {
+      "voice": "Un : actually. Ça ne veut pas dire actuellement, mais en fait.",
+      "onscreen": "actually = en fait",
+      "visual": {
+        "type": "list",
+        "accent": "1"
+      }
+    },
+    {
+      "voice": "Deux : library. Ce n'est pas une librairie, c'est une bibliothèque. Une librairie se dit bookshop.",
+      "onscreen": "library = bibliothèque",
+      "visual": {
+        "type": "list",
+        "accent": "2"
+      }
+    },
+    {
+      "voice": "Trois : sensible. En anglais, ça veut dire raisonnable. Sensible, en français, se dit sensitive.",
+      "onscreen": "sensible = raisonnable",
+      "visual": {
+        "type": "list",
+        "accent": "3"
+      }
+    },
+    {
+      "voice": "Ces mots s'appellent des faux amis. Lequel tu utilisais mal ? Dis-le en commentaire.",
+      "onscreen": "Ton faux ami ?",
+      "visual": {
+        "type": "question",
+        "accent": ""
+      }
+    }
+  ],
+  "title": "3 faux amis en anglais que tu utilises mal 🇬🇧",
+  "description": "Actually, library, sensible : trois pièges classiques de l'anglais.",
+  "hashtags": [
+    "#anglais",
+    "#english",
+    "#fauxamis"
+  ],
+  "sources": [
+    {
+      "title": "Faux-ami — Wikipédia",
+      "url": "https://fr.wikipedia.org/wiki/Faux-ami"
+    },
+    {
+      "title": "Cambridge Dictionary — actually",
+      "url": "https://dictionary.cambridge.org/dictionary/english/actually"
+    }
+  ]
+}

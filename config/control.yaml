@@ -1,0 +1,4 @@
+# Interrupteur général (voir docs/OPERATIONS.md). running | paused | stopped
+state: running
+reason: reprise manuelle
+publishing_enabled: true

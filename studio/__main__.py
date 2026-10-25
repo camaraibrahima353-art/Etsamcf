@@ -91,6 +91,39 @@ def cmd_alerts(a):
     return 0
 
 
+def cmd_check(a):
+    """Vérifie les clés configurées par un appel léger à chaque service, sans jamais afficher leur valeur."""
+    import os
+
+    import requests
+
+    out = {}
+    if os.environ.get("ELEVENLABS_API_KEY"):
+        try:
+            r = requests.get("https://api.elevenlabs.io/v1/user/subscription", timeout=30,
+                             headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"]})
+            j = r.json() if r.ok else {}
+            out["elevenlabs"] = (f"OK — forfait {j.get('tier')}, {j.get('character_count')}/{j.get('character_limit')} caractères utilisés"
+                                 if r.ok else f"ÉCHEC HTTP {r.status_code} (clé invalide ?)")
+        except Exception as e:
+            out["elevenlabs"] = f"ÉCHEC : {type(e).__name__}"
+    else:
+        out["elevenlabs"] = "absente (secret ELEVENLABS_API_KEY non défini)"
+    if os.environ.get("PEXELS_API_KEY"):
+        try:
+            r = requests.get("https://api.pexels.com/v1/search", params={"query": "ocean", "per_page": 1}, timeout=30,
+                             headers={"Authorization": os.environ["PEXELS_API_KEY"]})
+            out["pexels"] = f"OK — {r.json().get('total_results')} photos pour « ocean »" if r.ok else f"ÉCHEC HTTP {r.status_code} (clé invalide ?)"
+        except Exception as e:
+            out["pexels"] = f"ÉCHEC : {type(e).__name__}"
+    else:
+        out["pexels"] = "absente (secret PEXELS_API_KEY non défini)"
+    for k in ("YT_REFRESH_TOKEN", "TIKTOK_REFRESH_TOKEN", "FB_PAGE_TOKEN", "ANTHROPIC_API_KEY"):
+        out[k] = "présent" if os.environ.get(k) else "absent"
+    print(json.dumps(out, ensure_ascii=False, indent=2))
+    return 0 if all(not str(v).startswith("ÉCHEC") for v in out.values()) else 1
+
+
 def cmd_requeue(a):
     db = DB()
     db.conn.execute("UPDATE jobs SET status='pending', attempts=0, next_run_at=0, last_error=NULL WHERE video_id=? AND stage=?", (a.video_id, a.stage))
@@ -142,6 +175,7 @@ def main(argv=None):
         s.set_defaults(fn=cmd_control)
     sub.add_parser("status").set_defaults(fn=cmd_status)
     sub.add_parser("dashboard").set_defaults(fn=cmd_dashboard)
+    sub.add_parser("check", help="vérifie les clés API configurées (sans les afficher)").set_defaults(fn=cmd_check)
     sub.add_parser("alerts", help="signale les alertes critiques (issues GitHub)").set_defaults(fn=cmd_alerts)
     q = sub.add_parser("requeue")
     q.add_argument("video_id")

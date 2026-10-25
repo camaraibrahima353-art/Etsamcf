@@ -9,10 +9,10 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: "run | pause | resume | stop | status"
+        description: "run | pause | resume | stop | status | check (vérifier les clés)"
         default: run
         type: choice
-        options: [run, pause, resume, stop, status]
+        options: [run, check, pause, resume, stop, status]
       videos:
         description: "nombre maximum de vidéos pour ce passage (vide = config)"
         required: false

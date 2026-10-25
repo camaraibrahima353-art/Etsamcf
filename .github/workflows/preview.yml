@@ -41,8 +41,11 @@ jobs:
         run: |
           # sans jeton Replicate : images IA d'aperçu via le service gratuit pollinations (même famille FLUX)
           [ -z "$REPLICATE_API_TOKEN" ] && export STUDIO_AI_BACKEND=pollinations
-          python -m studio preview "${{ inputs.script }}" --out apercu
+          mkdir -p apercu
+          set -o pipefail
+          python -m studio preview "${{ inputs.script }}" --out apercu 2>&1 | tee apercu/journal-apercu.txt
       - name: Joindre à la pré-version « apercu »
+        if: always()
         run: |
           gh release view apercu >/dev/null 2>&1 || gh release create apercu --prerelease --title "Aperçus vidéo" --notes "Vidéos d'aperçu (non publiées)."
           gh release upload apercu apercu/* --clobber

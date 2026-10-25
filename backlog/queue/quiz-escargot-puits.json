@@ -11,7 +11,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "10 m",
-        "query": "snail"
+        "query": "snail",
+        "scene": "a small determined snail at the bottom of a deep stone well"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "snail climbing"
+        "query": "snail climbing",
+        "scene": "a snail climbing three metres up the well during the day, sliding down two at night under the moon"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "stone well"
+        "query": "stone well",
+        "scene": "a deep stone well with a question mark hovering above"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "list",
         "accent": "7",
-        "query": "snail wall"
+        "query": "snail wall",
+        "scene": "the snail progressing one metre per day, marks on the well wall"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "snail top"
+        "query": "snail top",
+        "scene": "the snail climbing out of the well on the eighth day, celebrating"
       }
     },
     {
@@ -56,7 +61,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "thinking question"
+        "query": "thinking question",
+        "scene": "a snail at the top of a well"
       }
     }
   ],

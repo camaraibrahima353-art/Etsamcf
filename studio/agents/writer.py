@@ -20,6 +20,10 @@ Règles impératives :
 - Pour chaque scène, `visual.query` : 2 à 4 mots-clés EN ANGLAIS pour trouver une vraie vidéo ou photo correspondante
   (ex. « octopus swimming », « pink lake salt workers »). L'accroche doit avoir l'image la plus frappante. Jamais de
   personne identifiable présentée comme liée au sujet si ce n'est pas le cas.
+- Pour chaque scène, `visual.scene` : UNE phrase EN ANGLAIS décrivant l'illustration de la scène avec des personnages
+  expressifs en action (ex. « a giant octopus with three glowing hearts hugging a surprised diver »). Le présentateur
+  récurrent du studio apparaît automatiquement dans l'accroche et la conclusion : ne le décris pas. Jamais de personne réelle vivante ;
+  les personnages historiques sont permis, représentés de façon fidèle et respectueuse.
 - Titre <= 70 caractères, description de 1 à 2 phrases, 3 à 5 hashtags pertinents."""
 
 

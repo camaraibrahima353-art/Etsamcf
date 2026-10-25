@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "english books"
+        "query": "english books",
+        "scene": "an English dictionary with three trick words jumping out like mischievous characters"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "list",
         "accent": "1",
-        "query": "student studying"
+        "query": "student studying",
+        "scene": "a French student talking to an English friend who looks confused"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "list",
         "accent": "2",
-        "query": "library books"
+        "query": "library books",
+        "scene": "a student in a large public library confused, a bookshop next door with a smiling bookseller"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "list",
         "accent": "3",
-        "query": "friends talking"
+        "query": "friends talking",
+        "scene": "two friends chatting, one nodding wisely about being reasonable"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "london street"
+        "query": "london street",
+        "scene": "a London street"
       }
     }
   ],

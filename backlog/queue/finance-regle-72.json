@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "money doubling"
+        "query": "money doubling",
+        "scene": "a coin magically splitting into two identical coins"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "72",
-        "query": "calculator"
+        "query": "calculator",
+        "scene": "a cheerful student dividing 72 on a calculator"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "list",
         "accent": "6",
-        "query": "savings jar"
+        "query": "savings jar",
+        "scene": "a savings jar slowly filling, a calendar showing the years passing"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "list",
         "accent": "3",
-        "query": "inflation prices"
+        "query": "inflation prices",
+        "scene": "prices on a market stall rising while a shopper's wallet shrinks"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "notebook calculation"
+        "query": "notebook calculation",
+        "scene": "a notebook with a simple calculation"
       }
     }
   ],

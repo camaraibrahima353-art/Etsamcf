@@ -11,7 +11,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "headphones music"
+        "query": "headphones music",
+        "scene": "a young person with headphones grimacing at first, then starting to smile"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "1968",
-        "query": "psychologist"
+        "query": "psychologist",
+        "scene": "a 1960s psychologist in a lab showing images to volunteers"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "listening music happy"
+        "query": "listening music happy",
+        "scene": "a person listening to the same song again and again, getting happier each time"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "billboard advertising"
+        "query": "billboard advertising",
+        "scene": "repetitive billboards along a street, people humming"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "singing friends"
+        "query": "singing friends",
+        "scene": "friends singing together"
       }
     }
   ],

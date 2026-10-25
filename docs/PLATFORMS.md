@@ -12,7 +12,16 @@ Sur GitHub Actions, la voix neuronale Piper (gratuite) est utilisée automatique
    `config/studio.yaml` → `voice.elevenlabs_voice_id`.
 Coût ≈ 0,05 $ par vidéo de 30 s, compté dans le budget et le tableau de bord.
 
-## Vraies images et vidéos (Pexels, gratuit)
+## Personnages IA (Replicate, obligatoire pour publier)
+Chaque scène est une illustration générée par IA (FLUX.1 [schnell], licence Apache 2.0, usage commercial autorisé)
+avec des personnages expressifs ; le présentateur récurrent ouvre et ferme chaque vidéo.
+1. Créer un compte sur replicate.com, ajouter un moyen de paiement (facturation à l'usage, ≈ 0,003 $ par image).
+2. https://replicate.com/account/api-tokens → créer un jeton → secret GitHub `REPLICATE_API_TOKEN`.
+3. Facultatif : changer l'apparence du présentateur ou le style dans `config/studio.yaml` → `ai_images`.
+Coût ≈ 0,02 $ par vidéo (6 images), compté dans le budget. Si la génération de l'accroche échoue, l'étape est
+retentée plus tard ; les autres scènes passent sur Pexels puis sur un fond procédural.
+
+## Vraies images et vidéos (Pexels, gratuit, secours)
 Chaque scène reçoit une vraie vidéo verticale (ou, à défaut, une vraie photo) cherchée avec les mots-clés `visual.query`
 du script ; l'accroche utilise toujours un média réel, sinon le QC bloque la publication (`require_real_hook_image`).
 1. Créer un compte gratuit sur pexels.com, puis https://www.pexels.com/api/ → « Your API Key ».

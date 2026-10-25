@@ -11,7 +11,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "23",
-        "query": "classroom students"
+        "query": "classroom students",
+        "scene": "a classroom of 23 students each holding a birthday card"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "calendar"
+        "query": "calendar",
+        "scene": "a giant calendar with 365 days and a confused student"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "birthday cake"
+        "query": "birthday cake",
+        "scene": "students pairing up with glowing lines connecting every pair"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "253",
-        "query": "probability dice"
+        "query": "probability dice",
+        "scene": "253 glowing threads connecting students, a probability dice rolling"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "birthday party friends"
+        "query": "birthday party friends",
+        "scene": "a birthday party"
       }
     }
   ],

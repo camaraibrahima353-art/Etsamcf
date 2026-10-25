@@ -11,7 +11,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "3",
-        "query": "octopus close up"
+        "query": "octopus close up",
+        "scene": "a giant purple octopus with three glowing hearts visible through its body and blue blood"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "octopus underwater"
+        "query": "octopus underwater",
+        "scene": "a friendly octopus character waving its tentacles in a coral reef, a curious diver watching"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "list",
         "accent": "2",
-        "query": "octopus swimming"
+        "query": "octopus swimming",
+        "scene": "two small glowing hearts pumping blue blood into the octopus's gills, oxygen bubbles around"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "list",
         "accent": "1",
-        "query": "octopus reef"
+        "query": "octopus reef",
+        "scene": "a big central heart pumping blue blood through the octopus's whole body like a glowing network"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "blue water ocean"
+        "query": "blue water ocean",
+        "scene": "a cheerful cartoon scientist comparing a glass of blue copper-rich octopus blood with red human blood"
       }
     },
     {
@@ -56,7 +61,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "octopus crawling"
+        "query": "octopus crawling",
+        "scene": "a tired octopus crawling on the sea floor instead of swimming, a surprised crab watching"
       }
     },
     {
@@ -65,7 +71,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "octopus eye"
+        "query": "octopus eye",
+        "scene": "a curious octopus with a big expressive eye in a coral reef"
       }
     }
   ],

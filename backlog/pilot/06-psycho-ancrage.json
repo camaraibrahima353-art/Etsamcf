@@ -11,7 +11,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "wheel of fortune spin"
+        "query": "wheel of fortune spin",
+        "scene": "a giant rigged spinning prize wheel with a sneaky glow"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "1974",
-        "query": "psychology experiment"
+        "query": "psychology experiment",
+        "scene": "two 1970s psychologists in a university lab spinning a wheel in front of attentive students"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "roulette wheel"
+        "query": "roulette wheel",
+        "scene": "a prize wheel stopping on a number while students look puzzled"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "crowd thinking"
+        "query": "crowd thinking",
+        "scene": "two groups of students giving very different guesses, thought bubbles with numbers"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "brain illustration"
+        "query": "brain illustration",
+        "scene": "a cartoon brain being pulled by an anchor tied to a random number"
       }
     },
     {
@@ -56,7 +61,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "sale price tag"
+        "query": "sale price tag",
+        "scene": "a shop with a crossed-out price tag"
       }
     }
   ],

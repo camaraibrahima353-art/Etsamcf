@@ -285,3 +285,46 @@ def test_no_topic_burned_when_publishing_without_pexels(studio, monkeypatch):
     s = orchestrator.run_cycle(studio, n_videos=2, skip_trends=True)
     assert s["planned"] == []
     assert studio.one("SELECT COUNT(*) n FROM videos")["n"] == 0
+
+
+def test_ai_scene_prompts_feature_host_and_characters():
+    from studio.media import aiimage
+    s = json.loads((ROOT / "backlog/pilot/01-science-pieuvre.json").read_text())
+    host = aiimage.cfg()["host"]
+    first, middle, last = (aiimage.scene_prompt(s, i) for i in (0, 2, len(s["scenes"]) - 1))
+    assert host in first and host in last and host not in middle
+    assert "octopus" in first and "characters" in middle and "no text" in middle
+
+
+def test_ai_image_generation_request_and_resume(tmp_path, monkeypatch):
+    from studio.media import aiimage
+    monkeypatch.setenv("REPLICATE_API_TOKEN", "r8_test")
+    calls = []
+
+    class R:
+        def __init__(self, data=None, content=b""):
+            self._d, self.content = data, content
+        def raise_for_status(self):
+            pass
+        def json(self):
+            return self._d
+
+    class S:
+        def post(self, url, headers, json, timeout):
+            calls.append(("post", url, json))
+            assert headers["Authorization"] == "Bearer r8_test"
+            return R({"status": "processing", "urls": {"get": "https://api.replicate.com/v1/predictions/x"}})
+        def get(self, url, headers=None, timeout=None):
+            calls.append(("get", url))
+            if "predictions" in url:
+                return R({"status": "succeeded", "output": ["https://replicate.delivery/x.jpg"]})
+            return R(content=b"\xff\xd8jpg")
+
+    monkeypatch.setattr(aiimage.time, "sleep", lambda s: None)
+    dest = tmp_path / "ai_00.jpg"
+    m = aiimage.generate("a cat", dest, "presentateur", session=S())
+    assert m["ai"] and dest.read_bytes() == b"\xff\xd8jpg"
+    assert calls[0][2]["input"]["aspect_ratio"] == "9:16" and "flux-schnell" in calls[0][1]
+    n = len(calls)
+    aiimage.generate("a cat", dest, "presentateur", session=S())  # reprise : pas de nouvel appel facturé
+    assert len(calls) == n

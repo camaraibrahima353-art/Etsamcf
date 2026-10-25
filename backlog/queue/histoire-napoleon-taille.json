@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "napoleon statue"
+        "query": "napoleon statue",
+        "scene": "Napoleon Bonaparte in his famous bicorne hat standing tall, a tape measure next to him"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "1,69",
-        "query": "measuring tape"
+        "query": "measuring tape",
+        "scene": "Napoleon standing next to French soldiers of his time, all about the same height"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "old ruler"
+        "query": "old ruler",
+        "scene": "two different old rulers, a French one and an English one, giving different lengths"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "political cartoon"
+        "query": "political cartoon",
+        "scene": "a British cartoonist of the 1800s drawing a tiny Napoleon in a caricature, laughing"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "paris arc de triomphe"
+        "query": "paris arc de triomphe",
+        "scene": "the Arc de Triomphe in Paris"
       }
     }
   ],

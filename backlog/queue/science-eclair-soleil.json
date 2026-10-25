@@ -11,7 +11,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "×5",
-        "query": "lightning strike"
+        "query": "lightning strike",
+        "scene": "a huge lightning bolt next to the Sun, both blazing"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "sun surface"
+        "query": "sun surface",
+        "scene": "the surface of the Sun with a thermometer character sweating"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "30 000",
-        "query": "lightning storm night"
+        "query": "lightning storm night",
+        "scene": "a lightning bolt in a night storm with a thermometer bursting"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "thunderstorm"
+        "query": "thunderstorm",
+        "scene": "air exploding outward around a lightning bolt, producing thunder shockwaves"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "list",
         "accent": "3",
-        "query": "storm clouds"
+        "query": "storm clouds",
+        "scene": "a child counting seconds between lightning and thunder, fingers raised"
       }
     },
     {
@@ -56,7 +61,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "rain window"
+        "query": "rain window",
+        "scene": "rain on a window"
       }
     }
   ],

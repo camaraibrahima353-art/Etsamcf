@@ -11,7 +11,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "1",
-        "query": "neptune planet"
+        "query": "neptune planet",
+        "scene": "the deep blue planet Neptune"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "telescope night"
+        "query": "telescope night",
+        "scene": "a nineteenth-century astronomer at a desk covered in calculations, pointing at the sky"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "165",
-        "query": "solar system planets"
+        "query": "solar system planets",
+        "scene": "Neptune slowly orbiting far from the Sun, other planets passing by much faster"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "planet orbit"
+        "query": "planet orbit",
+        "scene": "Neptune completing a full circle around the Sun, a celebration banner in space"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "outer space"
+        "query": "outer space",
+        "scene": "deep outer space"
       }
     }
   ],

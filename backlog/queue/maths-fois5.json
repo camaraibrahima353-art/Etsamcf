@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "mental math"
+        "query": "mental math",
+        "scene": "a giant multiplication by five sign above a chalkboard"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "math notebook"
+        "query": "math notebook",
+        "scene": "a number multiplied by ten then cut in half by a friendly character with scissors"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "240",
-        "query": "numbers chalkboard"
+        "query": "numbers chalkboard",
+        "scene": "a teacher at a chalkboard halving 48 into 24 and adding a zero"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "185",
-        "query": "calculation paper"
+        "query": "calculation paper",
+        "scene": "a student working out 37 times 5 on paper, a decimal point character dancing"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "student hand raised"
+        "query": "student hand raised",
+        "scene": "a chalkboard with a math problem"
       }
     }
   ],

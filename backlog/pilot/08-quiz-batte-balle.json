@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "baseball bat ball"
+        "query": "baseball bat ball",
+        "scene": "a baseball bat and a ball with price tags floating, mysterious spotlight"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "baseball"
+        "query": "baseball",
+        "scene": "a baseball bat and a ball sitting on a shop counter with a price tag"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "thinking person"
+        "query": "thinking person",
+        "scene": "a student scratching his head, a thought bubble with coins"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "coins money"
+        "query": "coins money",
+        "scene": "a cheeky ball character wagging its finger, saying not so fast"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "baseball ball close"
+        "query": "baseball ball close",
+        "scene": "the bat and ball characters standing next to coins, balanced on a scale"
       }
     },
     {
@@ -56,7 +61,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "question puzzle"
+        "query": "question puzzle",
+        "scene": "a giant question mark puzzle"
       }
     }
   ],

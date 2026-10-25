@@ -11,7 +11,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "factory machines"
+        "query": "factory machines",
+        "scene": "five friendly factory robots each making one object"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "factory production line"
+        "query": "factory production line",
+        "scene": "a giant factory with one hundred robots lined up"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "thinking person"
+        "query": "thinking person",
+        "scene": "a student answering too fast, a thought bubble with the number 100"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "assembly line"
+        "query": "assembly line",
+        "scene": "one hundred robots each finishing one object at the same time"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "brain puzzle"
+        "query": "brain puzzle",
+        "scene": "a brain puzzle"
       }
     }
   ],

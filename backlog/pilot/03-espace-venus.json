@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "venus planet"
+        "query": "venus planet",
+        "scene": "the yellow cloudy planet Venus slowly spinning"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "225",
-        "query": "planet orbit sun"
+        "query": "planet orbit sun",
+        "scene": "Venus orbiting the Sun along a glowing path, a tiny astronaut character counting days on a calendar"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "243",
-        "query": "planet rotation space"
+        "query": "planet rotation space",
+        "scene": "an astronaut character sitting on Venus, bored, waiting for the planet to finish one slow rotation"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "sunrise horizon"
+        "query": "sunrise horizon",
+        "scene": "an astronaut on Venus watching the Sun rise in the west, holding a compass upside down, confused"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "117",
-        "query": "planet surface clouds"
+        "query": "planet surface clouds",
+        "scene": "astronaut characters celebrating a sunrise on the hot cloudy surface of Venus"
       }
     },
     {
@@ -56,7 +61,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "starry night sky"
+        "query": "starry night sky",
+        "scene": "a birthday cake on Venus under a starry sky"
       }
     }
   ],

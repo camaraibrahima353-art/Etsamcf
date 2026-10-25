@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "browser padlock"
+        "query": "browser padlock",
+        "scene": "a browser padlock character pretending to be trustworthy"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "encryption data"
+        "query": "encryption data",
+        "scene": "data packets flying through a secure encrypted tunnel"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "hacker phishing"
+        "query": "hacker phishing",
+        "scene": "a sneaky fake website with a padlock, a phishing hook hidden behind it"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "list",
         "accent": "1",
-        "query": "phone scam message"
+        "query": "phone scam message",
+        "scene": "a young man checking a website address letter by letter with a magnifying glass"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "sharing phone"
+        "query": "sharing phone",
+        "scene": "a smartphone"
       }
     }
   ],

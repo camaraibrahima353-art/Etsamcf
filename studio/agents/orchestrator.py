@@ -86,6 +86,16 @@ def process_queue(db, deadline: float, max_jobs: int = 50) -> dict:
     return {"done": done, "failed": failed}
 
 
+def _missing_visual_key() -> str:
+    """Nom de la clé d'images qui manque pour publier, ou chaîne vide."""
+    if settings().get("ai_images", {}).get("required") and not os.environ.get("REPLICATE_API_TOKEN"):
+        return "REPLICATE_API_TOKEN"
+    if (settings()["quality"]["require_real_hook_image"]
+            and not (os.environ.get("REPLICATE_API_TOKEN") or os.environ.get("PEXELS_API_KEY"))):
+        return "REPLICATE_API_TOKEN ou PEXELS_API_KEY"
+    return ""
+
+
 def run_cycle(db, n_videos: int | None = None, time_budget_s: int = 1500, skip_trends=False) -> dict:
     t_start = time.time()
     deadline = t_start + time_budget_s
@@ -116,10 +126,9 @@ def run_cycle(db, n_videos: int | None = None, time_budget_s: int = 1500, skip_t
         db.kv_set("rehearsals_released", True)
         db.event("A_directeur", f"sortie du mode essai : {freed} sujet(s) de répétition remis en production")
 
-    if (publisher.effective_mode() != "dry_run" and settings()["quality"]["require_real_hook_image"]
-            and not os.environ.get("PEXELS_API_KEY")):
-        db.alert("A_directeur", "publication activée mais clé PEXELS_API_KEY absente : toute vidéo serait refusée au "
-                 "contrôle qualité. Aucun sujet consommé ; ajouter la clé.", "critical")
+    if publisher.effective_mode() != "dry_run" and _missing_visual_key():
+        db.alert("A_directeur", f"publication activée mais {_missing_visual_key()} absente : toute vidéo serait "
+                 "refusée au contrôle qualité. Aucun sujet consommé ; ajouter la clé.", "critical")
         summary["planned"] = []
         summary["queue"] = process_queue(db, deadline)
         return summary

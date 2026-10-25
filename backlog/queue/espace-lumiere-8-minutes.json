@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "sun space"
+        "query": "sun space",
+        "scene": "the Sun shining in space, its light travelling toward Earth"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "150M",
-        "query": "sunlight space earth"
+        "query": "sunlight space earth",
+        "scene": "a ray of sunlight racing across space from the Sun to the tiny Earth"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "8:20",
-        "query": "light beam"
+        "query": "light beam",
+        "scene": "a light beam character running at full speed with a stopwatch showing eight minutes"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "sunset"
+        "query": "sunset",
+        "scene": "people on a beach still watching the sunset, unaware the Sun just went dark"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "starry sky milky way"
+        "query": "starry sky milky way",
+        "scene": "the Milky Way over a desert"
       }
     }
   ],

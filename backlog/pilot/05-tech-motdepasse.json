@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "hacker laptop dark"
+        "query": "hacker laptop dark",
+        "scene": "a hooded cartoon hacker laughing at a laptop screen showing a cracked password lock"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "password login screen"
+        "query": "password login screen",
+        "scene": "a robot hacking program rapidly guessing passwords with swapped symbols, sparks flying"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "keyboard typing"
+        "query": "keyboard typing",
+        "scene": "a very long chain of keyboard keys stretching to the horizon, a hacker robot giving up exhausted"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "4-5",
-        "query": "lock security"
+        "query": "lock security",
+        "scene": "a young student remembering four random funny objects linked together: a horse, a battery, a staple, a door"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "computer security"
+        "query": "computer security",
+        "scene": "a cybersecurity expert character pointing at a giant long padlock made of words"
       }
     },
     {
@@ -56,7 +61,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "smartphone authentication"
+        "query": "smartphone authentication",
+        "scene": "a smartphone showing a two-factor confirmation prompt"
       }
     }
   ],

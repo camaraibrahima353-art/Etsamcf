@@ -11,7 +11,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "pink lake"
+        "query": "pink lake",
+        "scene": "a bright pink lake in Senegal under a blue sky"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "senegal lake"
+        "query": "senegal lake",
+        "scene": "Lake Retba seen from above near Dakar, pink water, colourful pirogues on the shore"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "pink salt lake"
+        "query": "pink salt lake",
+        "scene": "microscopic red algae characters glowing in very salty pink water"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "salt lake water"
+        "query": "salt lake water",
+        "scene": "the lake changing colour from pink to mauve as the sun moves, children watching from the shore"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "salt harvest workers"
+        "query": "salt harvest workers",
+        "scene": "Senegalese salt harvesters working in the pink lake, piling white salt into boats, skin protected with shea butter"
       }
     },
     {
@@ -56,7 +61,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "desert rally car"
+        "query": "desert rally car",
+        "scene": "a rally car crossing a finish line by a pink lake"
       }
     }
   ],

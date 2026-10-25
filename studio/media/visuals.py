@@ -105,15 +105,25 @@ def _dim_layer(w, h):
     return Image.fromarray(layer, "RGBA")
 
 
-def _photo_background(path, palette):
-    """Photo réelle recadrée en plein cadre (cover) + voile sombre."""
+def _light_dim(w, h):
+    """Voile léger : sombre en haut (texte) et en bas (sous-titres), clair au centre pour laisser voir les personnages."""
+    k = np.linspace(0, 1, h)[:, None]
+    alpha = 150 * np.clip(1 - k / 0.45, 0, 1) + 140 * np.clip((k - 0.62) / 0.38, 0, 1) + 20
+    a = np.repeat(alpha, w, axis=1).clip(0, 255).astype("uint8")
+    layer = np.zeros((h, w, 4), dtype="uint8")
+    layer[..., 3] = a
+    return Image.fromarray(layer, "RGBA")
+
+
+def _photo_background(path, palette, light_dim=False):
+    """Photo (réelle ou IA) recadrée en plein cadre (cover) + voile sombre."""
     w, h = int(W * OVER), int(H * OVER)
     src = Image.open(path).convert("RGB")
     scale = max(w / src.width, h / src.height)
     src = src.resize((int(src.width * scale) + 1, int(src.height * scale) + 1), Image.LANCZOS)
     left, top_ = (src.width - w) // 2, (src.height - h) // 2
     img = src.crop((left, top_, left + w, top_ + h)).convert("RGBA")
-    img.alpha_composite(_dim_layer(w, h))
+    img.alpha_composite(_light_dim(w, h) if light_dim else _dim_layer(w, h))
     return img, tuple(_hex(c) for c in palette)
 
 
@@ -125,13 +135,13 @@ def _shadow_text(img, xy, text, font, fill, anchor="mm"):
 
 
 def render_scene(out: Path, onscreen: str, visual: dict, palette: list, niche_label: str, index: int, total: int, seed: str,
-                 background: str | None = None, overlay_only: bool = False):
+                 background: str | None = None, overlay_only: bool = False, light_dim: bool = False):
     """Image de scène. background = photo réelle ; overlay_only = calque transparent posé sur une vidéo réelle."""
     if overlay_only:
         w, h = int(W * OVER), int(H * OVER)
         img, (top, mid, light) = _dim_layer(w, h), tuple(_hex(c) for c in palette)
     elif background:
-        img, (top, mid, light) = _photo_background(background, palette)
+        img, (top, mid, light) = _photo_background(background, palette, light_dim)
     else:
         img, (top, mid, light) = _background(palette, f"{seed}-{index}")
     w, h = img.size

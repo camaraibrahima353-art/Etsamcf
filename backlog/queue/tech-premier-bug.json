@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "moth insect"
+        "query": "moth insect",
+        "scene": "a moth stuck inside an old computer relay"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "1947",
-        "query": "vintage computer"
+        "query": "vintage computer",
+        "scene": "a huge 1940s Harvard computer, engineers in period clothing at the controls"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "old computer relay"
+        "query": "old computer relay",
+        "scene": "Grace Hopper and her team finding a moth in a relay with tweezers"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "notebook vintage"
+        "query": "notebook vintage",
+        "scene": "engineers taping a moth into a logbook"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "computer museum"
+        "query": "computer museum",
+        "scene": "a computer museum"
       }
     }
   ],

@@ -11,7 +11,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "sudan pyramids meroe"
+        "query": "sudan pyramids meroe",
+        "scene": "dozens of steep narrow Nubian pyramids of Meroe in the Sudanese desert"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "meroe pyramids"
+        "query": "meroe pyramids",
+        "scene": "a Kushite king and queen in royal regalia standing before their pyramids"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "nubian pyramids desert"
+        "query": "nubian pyramids desert",
+        "scene": "the pyramids of Meroe near the Nile, a camel caravan and a guide"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "giza pyramids"
+        "query": "giza pyramids",
+        "scene": "the pointed pyramids of Meroe next to the larger, wider pyramids of Giza for comparison"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "african desert"
+        "query": "african desert",
+        "scene": "the Sudanese desert at sunset"
       }
     }
   ],

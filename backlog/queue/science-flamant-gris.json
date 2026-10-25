@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "flamingo"
+        "query": "flamingo",
+        "scene": "a pink flamingo standing on one leg"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "flamingo chick"
+        "query": "flamingo chick",
+        "scene": "a fluffy grey flamingo chick with a straight beak next to its pink parent"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "flamingo eating water"
+        "query": "flamingo eating water",
+        "scene": "a flamingo filtering algae and tiny shrimp from shallow water"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "pink flamingos flock"
+        "query": "pink flamingos flock",
+        "scene": "a large flock of bright pink flamingos"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "flamingo zoo"
+        "query": "flamingo zoo",
+        "scene": "a flamingo in a park"
       }
     }
   ],

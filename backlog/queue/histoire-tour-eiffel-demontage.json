@@ -11,7 +11,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "eiffel tower"
+        "query": "eiffel tower",
+        "scene": "the Eiffel Tower with workers holding wrenches as if about to dismantle it"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "1889",
-        "query": "eiffel tower vintage"
+        "query": "eiffel tower vintage",
+        "scene": "the Eiffel Tower under construction in 1889, workers on the iron beams, crowds of the World's Fair"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "paris 1889"
+        "query": "paris 1889",
+        "scene": "Gustave Eiffel holding a contract, the tower behind him"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "eiffel tower structure"
+        "query": "eiffel tower structure",
+        "scene": "angry nineteenth-century artists signing a protest letter in front of the tower"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "radio antenna"
+        "query": "radio antenna",
+        "scene": "a radio operator of the early 1900s using the tower as a giant antenna, radio waves spreading"
       }
     },
     {
@@ -56,7 +61,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "eiffel tower night"
+        "query": "eiffel tower night",
+        "scene": "the Eiffel Tower lit up at night"
       }
     }
   ],

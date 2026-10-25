@@ -27,6 +27,7 @@ unit_costs:
   tts_local_usd: 0.0         # Piper / espeak-ng en local
   tts_cloud_per_1k_chars_usd: 0.10   # ElevenLabs Multilingual ≈ 80-100 $ / M caractères (≈ 0,05 $ par vidéo)
   visuals_procedural_usd: 0.0
+  ai_image_usd: 0.003       # FLUX.1 schnell sur Replicate ≈ 0,003 $ / image (≈ 0,02 $ par vidéo)
   compute_per_video_usd: 0.0 # GitHub Actions : gratuit dans le quota (dépôt public ou 2000 min/mois)
 
 retry:
@@ -43,8 +44,15 @@ voice:
   espeak_speed: 165
 
 visuals:
-  provider: auto             # auto = vraies vidéos/photos Pexels si PEXELS_API_KEY, sinon fonds procéduraux
-  prefer_video: true         # vidéo réelle d'abord, photo réelle ensuite
+  provider: auto             # auto = images IA avec personnages si REPLICATE_API_TOKEN, sinon Pexels, sinon procédural
+  prefer_video: true         # Pexels : vidéo réelle d'abord, photo réelle ensuite
+
+ai_images:                   # personnages générés par IA (studio/media/aiimage.py)
+  required: true             # hors dry_run : pas de publication sans personnage IA dans l'accroche
+  model: black-forest-labs/flux-schnell
+  # présentateur récurrent : même description à chaque vidéo pour qu'on le reconnaisse
+  host: "Kemo, a cheerful young West African man presenter with short hair, round glasses and a mustard-yellow hoodie"
+  style: "Stylized 3D animated cartoon illustration, expressive faces, soft cinematic lighting, vibrant saturated colors, high detail"
 
 quality:
   min_duration_s: 12

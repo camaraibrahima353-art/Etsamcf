@@ -11,5 +11,6 @@ Exigences :
 - Chaque fait est vérifié sur la source citée (WebFetch). 1 à 3 sources https réelles. Si un fait n'est pas vérifiable, supprime-le.
 - Nombres écrits en toutes lettres dans `voice` quand la lecture serait ambiguë.
 - Interdits : faux témoignages, faux événements, conseils médicaux/financiers personnalisés, promesses de gains.
+- Chaque scène a `visual.scene` : une phrase en anglais décrivant l'illustration IA avec des personnages en action (jamais de personne réelle vivante ; le présentateur récurrent est ajouté automatiquement à la 1re et à la dernière scène).
 - Varie `hook_variant` et `format` pour alimenter les tests A/B.
 Validation obligatoire avant de rendre la main : `python -c "import json,sys; from studio.schema import validate_script; print(validate_script(json.load(open(sys.argv[1]))))" <fichier>` doit afficher `[]`.

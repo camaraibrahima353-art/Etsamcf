@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "unfinished work desk"
+        "query": "unfinished work desk",
+        "scene": "a desk with an unfinished task glowing in the mind of a student"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "cafe waiter"
+        "query": "cafe waiter",
+        "scene": "a busy 1920s Berlin café, a waiter remembering many orders at once"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "waiter restaurant"
+        "query": "waiter restaurant",
+        "scene": "a waiter forgetting orders the moment they are paid, a young researcher taking notes"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "tv series binge"
+        "query": "tv series binge",
+        "scene": "a person watching a TV series cliffhanger, unable to stop thinking about it"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "list",
         "accent": "1",
-        "query": "starting work desk"
+        "query": "starting work desk",
+        "scene": "a desk with an open notebook"
       }
     }
   ],

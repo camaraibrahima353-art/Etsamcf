@@ -11,7 +11,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "coins stack growing"
+        "query": "coins stack growing",
+        "scene": "a stack of coins growing taller year after year"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "coins"
+        "query": "coins",
+        "scene": "a young saver receiving the same small pile of coins each year"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "snowball"
+        "query": "snowball",
+        "scene": "a snowball of coins rolling downhill and growing bigger"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "money growth chart"
+        "query": "money growth chart",
+        "scene": "two piles of coins side by side, one growing much faster"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "clock money"
+        "query": "clock money",
+        "scene": "a large clock"
       }
     }
   ],

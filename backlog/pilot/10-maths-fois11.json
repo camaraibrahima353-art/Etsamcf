@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "mental math"
+        "query": "mental math",
+        "scene": "a giant multiplication sign and the number 11 glowing above a chalkboard"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "36",
-        "query": "chalkboard numbers"
+        "query": "chalkboard numbers",
+        "scene": "a smiling teacher at a chalkboard separating the digits 3 and 6 with a gap"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "math calculation"
+        "query": "math calculation",
+        "scene": "the digits 3 and 6 holding hands with a 9 jumping into the middle"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "numbers notebook"
+        "query": "numbers notebook",
+        "scene": "a digit character carrying a one over its head to the next digit"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "627",
-        "query": "calculator"
+        "query": "calculator",
+        "scene": "a student solving 57 times 11 on a chalkboard, digits carrying a one"
       }
     },
     {
@@ -56,7 +61,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "student thinking"
+        "query": "student thinking",
+        "scene": "a chalkboard with a math problem"
       }
     }
   ],

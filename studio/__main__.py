@@ -118,6 +118,16 @@ def cmd_check(a):
             out["pexels"] = f"ÉCHEC : {type(e).__name__}"
     else:
         out["pexels"] = "absente (secret PEXELS_API_KEY non défini)"
+    if os.environ.get("REPLICATE_API_TOKEN"):
+        try:
+            r = requests.get("https://api.replicate.com/v1/account", timeout=30,
+                             headers={"Authorization": f"Bearer {os.environ['REPLICATE_API_TOKEN']}"})
+            out["replicate"] = (f"OK — compte {r.json().get('username')} : personnages IA activés" if r.ok
+                                else f"ÉCHEC HTTP {r.status_code} (jeton invalide ?)")
+        except Exception as e:
+            out["replicate"] = f"ÉCHEC : {type(e).__name__}"
+    else:
+        out["replicate"] = "absent (secret REPLICATE_API_TOKEN) : pas de personnages IA"
     if os.environ.get("ANTHROPIC_API_KEY"):
         try:
             r = requests.get("https://api.anthropic.com/v1/models", params={"limit": 1}, timeout=30,
@@ -140,8 +150,10 @@ def cmd_check(a):
     out["mode_publication"] = mode
     out["reserve_scripts"] = f"{left} script(s) non produits" 
     todo = []
+    if not out["replicate"].startswith("OK"):
+        todo.append("enregistrer REPLICATE_API_TOKEN (personnages IA, obligatoires ; ≈ 0,02 $ par vidéo)")
     if not out["pexels"].startswith("OK"):
-        todo.append("enregistrer PEXELS_API_KEY (sans elle, aucune vidéo ne peut être publiée)")
+        todo.append("facultatif : PEXELS_API_KEY (vraies images de secours pour les scènes hors accroche)")
     if not out["anthropic"].startswith("OK"):
         todo.append("enregistrer ANTHROPIC_API_KEY (sinon arrêt quand la réserve est vide)")
     if not out["elevenlabs"].startswith("OK"):
@@ -150,7 +162,8 @@ def cmd_check(a):
         todo.append("brancher au moins une plateforme (docs/PLATFORMS.md)")
     if mode == "dry_run":
         todo.append("variable de dépôt STUDIO_PUBLISH_MODE = private (essai réel) ou public")
-    out["pret_a_publier"] = "OUI" if not [t for t in todo if not t.startswith("facultatif")] else "NON"
+    blocking = [t for t in todo if not t.startswith("facultatif")]
+    out["pret_a_publier"] = "OUI" if not blocking else "NON"
     out["a_faire"] = todo
     print(json.dumps(out, ensure_ascii=False, indent=2))
     return 0 if all(not str(v).startswith("ÉCHEC") for v in out.values()) else 1

@@ -11,7 +11,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "theater stage"
+        "query": "theater stage",
+        "scene": "an actor on a theatre stage receiving a strange good-luck wish"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "list",
         "accent": "1",
-        "query": "theater actor"
+        "query": "theater actor",
+        "scene": "a nervous actor backstage, his friend giving a thumbs up"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "list",
         "accent": "2",
-        "query": "heavy rain"
+        "query": "heavy rain",
+        "scene": "cats and dogs falling from the sky in heavy rain, a surprised person with an umbrella"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "list",
         "accent": "3",
-        "query": "cake slice"
+        "query": "cake slice",
+        "scene": "a person happily eating an easy slice of cake"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "friends chatting"
+        "query": "friends chatting",
+        "scene": "friends chatting"
       }
     }
   ],

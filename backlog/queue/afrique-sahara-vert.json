@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "sahara desert dunes"
+        "query": "sahara desert dunes",
+        "scene": "the vast Sahara desert dunes with a hint of green ghostly grassland"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "9M",
-        "query": "sahara aerial"
+        "query": "sahara aerial",
+        "scene": "a giant Sahara desert seen from space, a map of the United States overlaid for size"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "green savanna lake"
+        "query": "green savanna lake",
+        "scene": "an ancient green Sahara with lakes, hippos, giraffes and herders with cattle"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "rock art"
+        "query": "rock art",
+        "scene": "prehistoric rock painters drawing giraffes and cattle on a rock wall"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "desert sunset"
+        "query": "desert sunset",
+        "scene": "a desert sunset"
       }
     }
   ],

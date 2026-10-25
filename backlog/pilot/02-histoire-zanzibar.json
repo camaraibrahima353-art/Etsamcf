@@ -11,7 +11,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "zanzibar stone town"
+        "query": "zanzibar stone town",
+        "scene": "an old stopwatch in front of a smoking nineteenth-century palace on a tropical island"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "bignumber",
         "accent": "1896",
-        "query": "zanzibar coast"
+        "query": "zanzibar coast",
+        "scene": "Zanzibar Stone Town harbour in 1896, dhow boats, people of the time in period clothing on the quay"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "old palace"
+        "query": "old palace",
+        "scene": "a stubborn sultan in traditional robes standing at the palace window, British officers holding an ultimatum letter"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "warship sea"
+        "query": "warship sea",
+        "scene": "Royal Navy warships of 1896 firing at a seaside palace, sailors in period uniforms"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "clock time passing"
+        "query": "clock time passing",
+        "scene": "a giant pocket watch showing under forty minutes, palace flag falling, surprised onlookers"
       }
     },
     {
@@ -56,7 +61,8 @@
       "visual": {
         "type": "text",
         "accent": "",
-        "query": "history old map"
+        "query": "history old map",
+        "scene": "a historian character holding a vintage map of East Africa"
       }
     }
   ],

@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "salary money wallet"
+        "query": "salary money wallet",
+        "scene": "a pay envelope splitting into three colourful piles of coins labelled with no text"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "list",
         "accent": "50",
-        "query": "rent house keys"
+        "query": "rent house keys",
+        "scene": "a young West African woman paying rent, groceries and a bus ticket, organised and calm"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "list",
         "accent": "30",
-        "query": "friends restaurant"
+        "query": "friends restaurant",
+        "scene": "a group of young friends laughing at a restaurant and going to the cinema"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "list",
         "accent": "20",
-        "query": "piggy bank savings"
+        "query": "piggy bank savings",
+        "scene": "a young man happily dropping coins into a large piggy bank"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "reveal",
         "accent": "",
-        "query": "budget notebook"
+        "query": "budget notebook",
+        "scene": "a young woman writing a budget in a notebook at her kitchen table, adapting the plan"
       }
     },
     {
@@ -56,7 +61,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "calculator money"
+        "query": "calculator money",
+        "scene": "a calculator and a small notebook on a desk"
       }
     }
   ],

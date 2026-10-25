@@ -106,10 +106,15 @@ def run(db, video_id: str):
     mode = os.environ.get("STUDIO_PUBLISH_MODE", cfg["publishing"]["mode"])
     check("voix de qualité publiable", voice != "espeak-ng" or mode == "dry_run" or q.get("allow_robotic_voice_publish"),
           f"moteur {voice} (robotique) refusé en mode {mode}")
-    hook_real = any(a.get("scene") == 0 and "réelle" in a.get("type", "") for a in assets)
-    real_n = sum(1 for a in assets if "réelle" in a.get("type", ""))
-    check("accroche sur une vraie image", hook_real or mode == "dry_run" or not q.get("require_real_hook_image"),
-          f"{real_n}/{len(script['scenes'])} scène(s) avec média réel")
+    def _imaged(a):
+        return "réelle" in a.get("type", "") or a.get("type") == "image IA"
+    hook_real = any(a.get("scene") == 0 and _imaged(a) for a in assets)
+    real_n = sum(1 for a in assets if _imaged(a))
+    check("accroche sur une vraie image ou une image IA", hook_real or mode == "dry_run" or not q.get("require_real_hook_image"),
+          f"{real_n}/{len(script['scenes'])} scène(s) avec image réelle ou IA")
+    if settings().get("ai_images", {}).get("required"):
+        hook_ai = any(a.get("scene") == 0 and a.get("type") == "image IA" for a in assets)
+        check("personnage IA dans l'accroche", hook_ai or mode == "dry_run", "ai_images.required")
 
     blocking_fail = [c for c in checks if c["blocking"] and not c["ok"]]
     report = {"video_id": video_id, "passed": not blocking_fail, "duration_s": dur, "lufs": lufs, "checks": checks}

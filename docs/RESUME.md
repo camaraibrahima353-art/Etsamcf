@@ -18,8 +18,10 @@ qualité → publication via les API officielles → statistiques → améliorat
   Afrique méconnue, maths.
 - **Voix :** ElevenLabs (payant, naturelle) si la clé existe, sinon Piper (gratuite). La voix robotique de secours
   ne peut jamais être publiée.
-- **Images :** vraies vidéos/photos Pexels (gratuit, usage commercial autorisé) derrière chaque scène ; l'accroche
-  doit obligatoirement avoir une vraie image pour être publiée.
+- **Images :** chaque scène est une illustration générée par IA avec des personnages (FLUX.1 schnell via Replicate,
+  ≈ 0,003 $/image). Un présentateur récurrent, Kemo, ouvre et ferme chaque vidéo ; il est décrit dans
+  `config/studio.yaml` → `ai_images.host`. Sans personnage IA dans l'accroche, une vidéo ne peut pas être publiée.
+  Les vraies photos/vidéos Pexels servent de secours pour les autres scènes.
 - **Sécurité :** plafonds de dépenses (2 $/jour, 30 $/mois) avec pause automatique, arrêt d'urgence, reprise après
   panne, aucun doublon, secrets jamais écrits dans le code, mention « contenu IA » sur chaque plateforme,
   aucune ruse contre les plateformes (pas de faux comptes ni de fausses vues).
@@ -40,7 +42,8 @@ Tout se fait dans **GitHub → Settings → Secrets and variables → Actions**.
 
 | # | Action | Obligatoire ? | Coût |
 |---|--------|---------------|------|
-| 1 | Secret `PEXELS_API_KEY` (pexels.com/api) | **Oui** : sans vraie image, rien n'est publiable | 0 $ |
+| 1 | Secret `REPLICATE_API_TOKEN` (replicate.com/account/api-tokens) | **Oui** : les personnages IA sont obligatoires pour publier | ≈ 0,02 $/vidéo |
+| 1b | Secret `PEXELS_API_KEY` (pexels.com/api) | Non : vraies images de secours si une image IA échoue | 0 $ |
 | 2 | Secret `ANTHROPIC_API_KEY` (console.anthropic.com) | **Oui** pour tourner plus de 3 jours : écrit les nouveaux scripts | ≈ 0,05 $/vidéo |
 | 3 | Secret `ELEVENLABS_API_KEY` | Non : sans elle, voix Piper gratuite (correcte) | ≈ 0,05 $/vidéo |
 | 4 | Au moins une plateforme (`docs/PLATFORMS.md`) | **Oui** | 0 $ |
@@ -54,12 +57,12 @@ Ce que chaque plateforme permet **dès aujourd'hui, sans audit** :
   accès standard suffisant pour votre propre Page).
 - **YouTube Shorts** : envois en privé tant que le projet Google n'a pas passé l'audit ; à demander dès le début (plusieurs semaines).
 
-Ordre conseillé : clés 1-2 → Facebook + TikTok → `check` → `private` pendant 1 passage (vérifier un brouillon sur
+Ordre conseillé : clés 1 et 2 → Facebook + TikTok → `check` → `private` pendant 1 passage (vérifier un brouillon sur
 chaque compte) → `public`.
 
 ## Coûts
-Hébergement 0 $ ; images 0 $ ; scripts par IA ≈ 0,05 $/vidéo ; voix ElevenLabs ≈ 0,05 $/vidéo (facultative).
-À 10 vidéos/jour : ≈ 0,50 à 1 $/jour, sous le plafond automatique de 2 $/jour et 30 $/mois.
+Hébergement 0 $ ; images IA ≈ 0,02 $/vidéo ; scripts par IA ≈ 0,05 $/vidéo ; voix ElevenLabs ≈ 0,05 $/vidéo (facultative).
+À 10 vidéos/jour : ≈ 0,70 à 1,20 $/jour, sous le plafond automatique de 2 $/jour et 30 $/mois.
 
 ## Limites
 Aucune statistique réelle tant que rien n'est publié : le classement des vidéos les plus prometteuses

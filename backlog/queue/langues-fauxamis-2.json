@@ -11,7 +11,8 @@
       "visual": {
         "type": "title",
         "accent": "",
-        "query": "english class"
+        "query": "english class",
+        "scene": "an English classroom where three trick words come alive as mischievous characters"
       }
     },
     {
@@ -20,7 +21,8 @@
       "visual": {
         "type": "list",
         "accent": "1",
-        "query": "finally finish line"
+        "query": "finally finish line",
+        "scene": "a runner finally crossing a finish line"
       }
     },
     {
@@ -29,7 +31,8 @@
       "visual": {
         "type": "list",
         "accent": "2",
-        "query": "conference audience"
+        "query": "conference audience",
+        "scene": "students attending a lecture in an auditorium while one waits outside the door"
       }
     },
     {
@@ -38,7 +41,8 @@
       "visual": {
         "type": "list",
         "accent": "3",
-        "query": "acting pretend"
+        "query": "acting pretend",
+        "scene": "a child pretending to be a pirate with a cardboard sword"
       }
     },
     {
@@ -47,7 +51,8 @@
       "visual": {
         "type": "question",
         "accent": "",
-        "query": "students quiz"
+        "query": "students quiz",
+        "scene": "a classroom quiz"
       }
     }
   ],

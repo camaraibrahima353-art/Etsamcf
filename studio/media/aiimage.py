@@ -103,7 +103,7 @@ def _pollinations(prompt: str, dest: Path, seed_text: str, session) -> dict:
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 dest.write_bytes(r.content)
                 return _media(dest, prompt)
-            last = f"HTTP {r.status_code}"
+            last = f"HTTP {r.status_code} {r.text[:200]}"
         except Exception as e:
             last = type(e).__name__
         time.sleep(8 * (attempt + 1))

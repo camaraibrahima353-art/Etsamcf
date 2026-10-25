@@ -44,7 +44,7 @@ jobs:
           for u in "https://image.pollinations.ai/prompt/a%20cartoon%20octopus?width=768&height=1344&model=flux&seed=1&nologo=true" \
                    "https://image.pollinations.ai/prompt/a%20cartoon%20octopus?width=768&height=1344&seed=1" \
                    "https://gen.pollinations.ai/image/a%20cartoon%20octopus?width=768&height=1344&model=flux&seed=1"; do
-            curl -s -o /tmp/r -w "%{http_code} %{content_type} $u\n" "$u" | tee -a apercu/diagnostic.txt
+            curl -s --max-time 120 -o /tmp/r -w "%{http_code} %{content_type} $u\n" "$u" | tee -a apercu/diagnostic.txt
             head -c 300 /tmp/r | tr -cd '[:print:]\n' >> apercu/diagnostic.txt; echo >> apercu/diagnostic.txt
           done
       - name: Fabriquer l'aperçu

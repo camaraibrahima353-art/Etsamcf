@@ -45,12 +45,33 @@ def _published_today(db, platform):
                   platform, now_iso()[:10])["n"]
 
 
+def effective_mode() -> str:
+    """Mode de publication réel : variable STUDIO_PUBLISH_MODE, sinon config ; dry_run si la publication est coupée."""
+    mode = os.environ.get("STUDIO_PUBLISH_MODE") or settings()["publishing"]["mode"]
+    if not read_control().get("publishing_enabled", True):
+        return "dry_run"
+    return mode if mode in ("dry_run", "private", "public") else "dry_run"
+
+
+def release_rehearsals(db) -> int:
+    """Libère les sujets consommés en répétition (dry_run) pour qu'ils soient refaits avec la vraie voix et les
+    vraies images. Ne touche ni aux vidéos en cours de fabrication ni à celles réellement envoyées."""
+    rows = db.conn.execute(
+        "SELECT id FROM videos v WHERE (status IN ('ready','qc_failed','publish_failed') OR status LIKE 'failed_%' "
+        "OR status LIKE 'blocked_%') "
+        "AND NOT EXISTS (SELECT 1 FROM publications p WHERE p.video_id=v.id AND p.status!='dry_run') "
+        "AND NOT EXISTS (SELECT 1 FROM jobs j WHERE j.video_id=v.id AND j.status IN ('pending','running'))").fetchall()
+    ids = [r[0] for r in rows]
+    for vid in ids:
+        for table in ("jobs", "publications", "videos"):
+            db.conn.execute(f"DELETE FROM {table} WHERE {'id' if table == 'videos' else 'video_id'}=?", (vid,))
+    db.conn.commit()
+    return len(ids)
+
+
 def run(db, video_id: str):
     cfg = settings()["publishing"]
-    ctl = read_control()
-    mode = os.environ.get("STUDIO_PUBLISH_MODE", cfg["mode"])
-    if not ctl.get("publishing_enabled", True):
-        mode = "dry_run"
+    mode = effective_mode()
     v = db.video(video_id)
     meta = package(db, video_id)
     path = data_dir() / v["final_path"]

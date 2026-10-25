@@ -202,6 +202,7 @@ def test_llm_structured_call_with_fake_client():
 
 
 @pytest.mark.skipif(not shutil.which("ffmpeg"), reason="ffmpeg requis")
+@pytest.mark.skipif(not shutil.which("espeak-ng"), reason="espeak-ng requis (voix de secours du test)")
 def test_full_pipeline_with_injected_failure(studio, monkeypatch):
     """Pipeline complet sur 1 vidéo, avec panne simulée au montage puis reprise automatique."""
     from studio.agents.orchestrator import process_queue, run_cycle
@@ -262,3 +263,25 @@ def test_pexels_find_prefers_portrait_video_and_skips_used(studio, monkeypatch):
     assert s.calls[0][2]["params"]["orientation"] == "portrait"
     assert s.calls[1][1] == "https://cdn/2v.mp4"  # fichier vertical choisi
     assert open(m["path"], "rb").read() == b"MP4"
+
+
+def test_release_rehearsals_frees_dry_run_topics_only(studio):
+    from studio.agents import publisher
+    rehearsal = studio.create_video("science", "a", "ka", "backlog", status="ready")
+    studio.conn.execute("INSERT INTO publications(video_id,platform,status) VALUES(?,?,?)", (rehearsal, "youtube", "dry_run"))
+    sent = studio.create_video("science", "b", "kb", "backlog", status="published")
+    studio.conn.execute("INSERT INTO publications(video_id,platform,status) VALUES(?,?,?)", (sent, "tiktok", "draft"))
+    busy = studio.create_video("science", "c", "kc", "backlog", status="scripted")
+    studio.enqueue(busy, "direct")
+    assert publisher.release_rehearsals(studio) == 1
+    assert studio.create_video("science", "a", "ka", "backlog") is not None  # sujet de répétition réutilisable
+    assert studio.video(sent) and studio.video(busy)
+
+
+def test_no_topic_burned_when_publishing_without_pexels(studio, monkeypatch):
+    from studio.agents import orchestrator
+    monkeypatch.setenv("STUDIO_PUBLISH_MODE", "private")
+    monkeypatch.delenv("PEXELS_API_KEY", raising=False)
+    s = orchestrator.run_cycle(studio, n_videos=2, skip_trends=True)
+    assert s["planned"] == []
+    assert studio.one("SELECT COUNT(*) n FROM videos")["n"] == 0

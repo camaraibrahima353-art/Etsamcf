@@ -48,5 +48,14 @@ Même master vidéo ; publication via Instagram Graph API (compte professionnel 
 À ajouter quand Facebook fonctionne.
 
 ## Passer d'un mode à l'autre
-Variable de dépôt `STUDIO_PUBLISH_MODE` : `dry_run` → `private` (tester les intégrations sur vos comptes) → `public`
-(seulement après audits). Une plateforme sans identifiants passe en `blocked_credentials` sans bloquer les autres.
+Variable de dépôt `STUDIO_PUBLISH_MODE` : `dry_run` → `private` (tester les intégrations sur vos comptes) → `public`.
+
+| Plateforme | `private` | `public` avant audit | `public` après audit |
+|---|---|---|---|
+| TikTok `inbox` | brouillon | brouillon (vous publiez d'un geste) | brouillon |
+| TikTok `direct` | privé | privé (forcé par TikTok) | public |
+| Facebook Reels | brouillon | programmé, public | programmé, public |
+| YouTube Shorts | privé | privé (verrouillé par YouTube) | programmé, public |
+
+Passer en `public` avant les audits est donc sans risque : TikTok et YouTube gardent eux-mêmes les vidéos privées.
+Au premier passage hors `dry_run`, les sujets fabriqués en essai sont remis en production avec les vraies images. Une plateforme sans identifiants passe en `blocked_credentials` sans bloquer les autres.

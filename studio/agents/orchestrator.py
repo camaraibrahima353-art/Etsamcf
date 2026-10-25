@@ -111,6 +111,19 @@ def run_cycle(db, n_videos: int | None = None, time_budget_s: int = 1500, skip_t
             db.event("B_tendances", f"échec recherche de tendances : {e}", level="WARNING")
             db.agent_status("B_tendances", AGENTS["B_tendances"], "erreur", str(e)[:200])
 
+    if publisher.effective_mode() != "dry_run" and not db.kv_get("rehearsals_released"):
+        freed = publisher.release_rehearsals(db)
+        db.kv_set("rehearsals_released", True)
+        db.event("A_directeur", f"sortie du mode essai : {freed} sujet(s) de répétition remis en production")
+
+    if (publisher.effective_mode() != "dry_run" and settings()["quality"]["require_real_hook_image"]
+            and not os.environ.get("PEXELS_API_KEY")):
+        db.alert("A_directeur", "publication activée mais clé PEXELS_API_KEY absente : toute vidéo serait refusée au "
+                 "contrôle qualité. Aucun sujet consommé ; ajouter la clé.", "critical")
+        summary["planned"] = []
+        summary["queue"] = process_queue(db, deadline)
+        return summary
+
     n = n_videos if n_videos is not None else settings()["production"]["videos_per_run"]
     summary["planned"] = strategist.run(db, tr, n)
     db.agent_status("C_strategie", AGENTS["C_strategie"], "inactif", f"{len(summary['planned'])} planifiée(s)")

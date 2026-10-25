@@ -26,22 +26,40 @@ qualité → publication via les API officielles → statistiques → améliorat
 
 ## Ce qui est fait et vérifié
 - Recherche documentée (tendances, outils, coûts, top 10 des niches) : `docs/RESEARCH.md`.
-- Pilote de 10 vidéos produites et validées ; 30 scripts sourcés en réserve (≈ 3 jours d'autonomie).
-- Tests : 13/13 ; reprise testée (panne simulée, processus tué, double lancement, budget dépassé, arrêt).
-- Ordonnanceur vérifié : passages manuels et planifiés réussis sur GitHub, état restauré, pas de doublon.
+- Pilote de 10 vidéos produites ; **30 scripts sourcés** (10 du pilote + 20 en file), soit ≈ 3 jours à 10 vidéos/jour.
+  Les vidéos fabriquées en mode essai (`dry_run`, voix et fonds de secours) ne « consomment » pas ces sujets : au
+  premier passage en `private` ou `public`, le studio les remet en production avec les vraies images.
+- Tests : 14 réussis (+ 1 qui exige espeak-ng, exécuté sur GitHub) ; reprise testée (panne simulée, processus tué,
+  double lancement, budget dépassé, arrêt).
+- Ordonnanceur vérifié : passages planifiés réussis sur GitHub toutes les 6 h depuis le 22/10, état restauré, pas de doublon.
+- Garde-fou : si la publication est activée sans clé Pexels, aucun sujet n'est gâché (alerte critique à la place).
 - Tableau de bord HTML + rapport quotidien + alertes critiques en « issues » GitHub.
 
-## Ce qui reste à faire (par le propriétaire)
-1. **ElevenLabs :** payer l'abonnement, créer une clé API → secret GitHub `ELEVENLABS_API_KEY`.
-2. **Pexels :** compte gratuit, clé sur pexels.com/api → secret GitHub `PEXELS_API_KEY`.
-   (GitHub → Settings → Secrets and variables → Actions → New repository secret.)
-3. Lancer le workflow « studio » avec l'action `check` pour vérifier les clés.
-4. **Publication :** créer les accès API TikTok / YouTube / Facebook (`docs/PLATFORMS.md`), puis variable
-   `STUDIO_PUBLISH_MODE=private`. TikTok et YouTube imposent un audit avant la publication publique.
-5. Facultatif : `ANTHROPIC_API_KEY` pour que le studio écrive lui-même de nouveaux scripts quand la réserve est vide.
+## Pour commencer maintenant (propriétaire)
+Tout se fait dans **GitHub → Settings → Secrets and variables → Actions**.
+
+| # | Action | Obligatoire ? | Coût |
+|---|--------|---------------|------|
+| 1 | Secret `PEXELS_API_KEY` (pexels.com/api) | **Oui** : sans vraie image, rien n'est publiable | 0 $ |
+| 2 | Secret `ANTHROPIC_API_KEY` (console.anthropic.com) | **Oui** pour tourner plus de 3 jours : écrit les nouveaux scripts | ≈ 0,05 $/vidéo |
+| 3 | Secret `ELEVENLABS_API_KEY` | Non : sans elle, voix Piper gratuite (correcte) | ≈ 0,05 $/vidéo |
+| 4 | Au moins une plateforme (`docs/PLATFORMS.md`) | **Oui** | 0 $ |
+| 5 | Actions → studio → Run workflow → action `check` | Vérifie tout et affiche `pret_a_publier` + la liste `a_faire` | — |
+| 6 | Onglet *Variables* : `STUDIO_PUBLISH_MODE` = `private`, puis `public` | **Oui** (décision du propriétaire) | — |
+
+Ce que chaque plateforme permet **dès aujourd'hui, sans audit** :
+- **TikTok (mode `inbox`)** : la vidéo arrive dans vos brouillons TikTok ; vous la publiez d'un geste (étiquette IA à cocher).
+  C'est la voie la plus rapide vers de vraies vues.
+- **Facebook Reels** : publication programmée sur votre Page en mode `public` (application Meta passée en mode « Live »,
+  accès standard suffisant pour votre propre Page).
+- **YouTube Shorts** : envois en privé tant que le projet Google n'a pas passé l'audit ; à demander dès le début (plusieurs semaines).
+
+Ordre conseillé : clés 1-2 → Facebook + TikTok → `check` → `private` pendant 1 passage (vérifier un brouillon sur
+chaque compte) → `public`.
 
 ## Coûts
-Hébergement 0 $ ; images 0 $ ; voix ElevenLabs ≈ 0,05 $/vidéo ; scripts par IA ≈ 0,05 $/vidéo (facultatif).
+Hébergement 0 $ ; images 0 $ ; scripts par IA ≈ 0,05 $/vidéo ; voix ElevenLabs ≈ 0,05 $/vidéo (facultative).
+À 10 vidéos/jour : ≈ 0,50 à 1 $/jour, sous le plafond automatique de 2 $/jour et 30 $/mois.
 
 ## Limites
 Aucune statistique réelle tant que rien n'est publié : le classement des vidéos les plus prometteuses

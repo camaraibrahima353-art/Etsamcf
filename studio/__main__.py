@@ -118,8 +118,40 @@ def cmd_check(a):
             out["pexels"] = f"ÉCHEC : {type(e).__name__}"
     else:
         out["pexels"] = "absente (secret PEXELS_API_KEY non défini)"
-    for k in ("YT_REFRESH_TOKEN", "TIKTOK_REFRESH_TOKEN", "FB_PAGE_TOKEN", "ANTHROPIC_API_KEY"):
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        try:
+            r = requests.get("https://api.anthropic.com/v1/models", params={"limit": 1}, timeout=30,
+                             headers={"x-api-key": os.environ["ANTHROPIC_API_KEY"], "anthropic-version": "2023-06-01"})
+            out["anthropic"] = "OK — le studio peut écrire de nouveaux scripts" if r.ok else f"ÉCHEC HTTP {r.status_code} (clé invalide ?)"
+        except Exception as e:
+            out["anthropic"] = f"ÉCHEC : {type(e).__name__}"
+    else:
+        out["anthropic"] = "absente (secret ANTHROPIC_API_KEY) : production arrêtée quand la réserve sera vide"
+    for k in ("YT_REFRESH_TOKEN", "TIKTOK_REFRESH_TOKEN", "FB_PAGE_TOKEN"):
         out[k] = "présent" if os.environ.get(k) else "absent"
+
+    from .agents import publisher, strategist
+    from .agents.strategist import topic_key
+
+    db = DB()
+    left = sum(1 for s in strategist.backlog_scripts()
+               if not db.one("SELECT 1 FROM videos WHERE topic_key=?", topic_key(s["niche"], s["topic"])))
+    mode = publisher.effective_mode()
+    out["mode_publication"] = mode
+    out["reserve_scripts"] = f"{left} script(s) non produits" 
+    todo = []
+    if not out["pexels"].startswith("OK"):
+        todo.append("enregistrer PEXELS_API_KEY (sans elle, aucune vidéo ne peut être publiée)")
+    if not out["anthropic"].startswith("OK"):
+        todo.append("enregistrer ANTHROPIC_API_KEY (sinon arrêt quand la réserve est vide)")
+    if not out["elevenlabs"].startswith("OK"):
+        todo.append("facultatif : ELEVENLABS_API_KEY (voix plus naturelle que Piper)")
+    if not any(out[k] == "présent" for k in ("YT_REFRESH_TOKEN", "TIKTOK_REFRESH_TOKEN", "FB_PAGE_TOKEN")):
+        todo.append("brancher au moins une plateforme (docs/PLATFORMS.md)")
+    if mode == "dry_run":
+        todo.append("variable de dépôt STUDIO_PUBLISH_MODE = private (essai réel) ou public")
+    out["pret_a_publier"] = "OUI" if not [t for t in todo if not t.startswith("facultatif")] else "NON"
+    out["a_faire"] = todo
     print(json.dumps(out, ensure_ascii=False, indent=2))
     return 0 if all(not str(v).startswith("ÉCHEC") for v in out.values()) else 1
 

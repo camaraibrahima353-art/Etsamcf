@@ -169,6 +169,41 @@ def cmd_check(a):
     return 0 if all(not str(v).startswith("ÉCHEC") for v in out.values()) else 1
 
 
+def cmd_preview(a):
+    """Fabrique UNE vidéo d'aperçu à partir d'un script, dans un dossier isolé : ne touche ni à la base de
+    production, ni à la réserve de sujets, ni aux plateformes."""
+    import os
+    import shutil
+    from pathlib import Path
+
+    from . import config
+    from .agents import director, editor, qc, writer
+    from .schema import topic_key
+
+    src = Path(a.script)
+    os.environ["STUDIO_DATA_DIR"] = f"data/preview/{src.stem}"
+    os.environ["STUDIO_PUBLISH_MODE"] = "dry_run"
+    config.settings.cache_clear()
+    root = config.data_dir()
+    script = json.loads(src.read_text(encoding="utf-8"))
+    db = DB()
+    vid = db.create_video(script["niche"], script["topic"], topic_key(script["niche"], script["topic"]) + "-apercu",
+                          "preview", script_json=json.dumps(script, ensure_ascii=False)) \
+        or db.one("SELECT id FROM videos ORDER BY created_at DESC")["id"]
+    for name, agent in (("scénario", writer), ("images et voix", director), ("montage", editor)):
+        print(f"{name} : {json.dumps(agent.run(db, vid), ensure_ascii=False)[:400]}")
+    try:
+        print(f"contrôle : {json.dumps(qc.run(db, vid), ensure_ascii=False)[:600]}")
+    except Exception as e:  # l'aperçu reste visible même si le contrôle qualité le refuse
+        print(f"contrôle : REFUSÉ — {e}")
+    out = Path(a.out)
+    out.mkdir(parents=True, exist_ok=True)
+    for ext in ("mp4", "jpg"):
+        shutil.copy(root / "final" / f"{vid}.{ext}", out / f"{src.stem}.{ext}")
+    print(f"aperçu : {out / (src.stem + '.mp4')}")
+    return 0
+
+
 def cmd_requeue(a):
     db = DB()
     db.conn.execute("UPDATE jobs SET status='pending', attempts=0, next_run_at=0, last_error=NULL WHERE video_id=? AND stage=?", (a.video_id, a.stage))
@@ -220,6 +255,10 @@ def main(argv=None):
         s.set_defaults(fn=cmd_control)
     sub.add_parser("status").set_defaults(fn=cmd_status)
     sub.add_parser("dashboard").set_defaults(fn=cmd_dashboard)
+    p = sub.add_parser("preview", help="fabrique une vidéo d'aperçu isolée à partir d'un script JSON")
+    p.add_argument("script")
+    p.add_argument("--out", default="apercu")
+    p.set_defaults(fn=cmd_preview)
     sub.add_parser("check", help="vérifie les clés API configurées (sans les afficher)").set_defaults(fn=cmd_check)
     sub.add_parser("alerts", help="signale les alertes critiques (issues GitHub)").set_defaults(fn=cmd_alerts)
     q = sub.add_parser("requeue")

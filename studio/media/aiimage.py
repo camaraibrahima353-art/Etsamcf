@@ -3,7 +3,7 @@
 Un présentateur récurrent (config `ai_images.host`) ouvre et ferme chaque vidéo ; les autres scènes mettent en
 scène le sujet avec des personnages expressifs. Jamais de personne réelle vivante identifiable.
 Clé : https://replicate.com/account/api-tokens -> secret REPLICATE_API_TOKEN. Coût ≈ 0,003 $ par image.
-Aperçu sans clé : STUDIO_AI_BACKEND=pollinations (service gratuit, même famille de modèle FLUX, sans garantie de
+Aperçu sans clé : STUDIO_AI_BACKEND=pollinations (service gratuit, modèle plus simple que FLUX, sans garantie de
 disponibilité) — réservé à la commande `preview`, jamais à la production."""
 from __future__ import annotations
 
@@ -91,8 +91,10 @@ def generate(prompt: str, dest: Path, seed_text: str, session=requests) -> dict:
 
 def _pollinations(prompt: str, dest: Path, seed_text: str, session) -> dict:
     """Aperçu gratuit sans clé (image.pollinations.ai, modèle FLUX), avec quelques nouvelles tentatives."""
-    url = (f"https://image.pollinations.ai/prompt/{quote(prompt)}?width=768&height=1344&model=flux"
-           f"&seed={_seed(seed_text)}&nologo=true&private=true")
+    short = prompt.replace("Main characters in the lower two thirds of the frame, calm empty area at the top, ", "")
+    short = short.replace(", no text, no letters, no words, no logo, no watermark", ", no text")[:380]
+    url = (f"https://image.pollinations.ai/prompt/{quote(short, safe='')}?width=768&height=1344"
+           f"&seed={_seed(seed_text)}&nologo=true")
     last = None
     for attempt in range(4):
         try:

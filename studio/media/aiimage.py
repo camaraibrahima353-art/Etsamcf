@@ -35,7 +35,8 @@ def available() -> bool:
 
 
 def _seed(text: str) -> int:
-    return int(hashlib.sha1(text.encode()).hexdigest()[:8], 16)
+    """Graine stable (même texte => même personnage) ; bornée car certains services refusent les grands entiers."""
+    return int(hashlib.sha1(text.encode()).hexdigest()[:8], 16) % 1_000_000
 
 
 def scene_prompt(script: dict, index: int) -> str:

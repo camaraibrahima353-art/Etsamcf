@@ -328,3 +328,11 @@ def test_ai_image_generation_request_and_resume(tmp_path, monkeypatch):
     n = len(calls)
     aiimage.generate("a cat", dest, "presentateur", session=S())  # reprise : pas de nouvel appel facturé
     assert len(calls) == n
+
+
+def test_cli_preview_arguments(monkeypatch):
+    import studio.__main__ as cli
+    seen = {}
+    monkeypatch.setattr(cli, "cmd_preview", lambda a: seen.update(script=a.script, out=a.out) or 0)
+    assert cli.main(["preview", "backlog/pilot/01-science-pieuvre.json", "--out", "x"]) == 0
+    assert seen == {"script": "backlog/pilot/01-science-pieuvre.json", "out": "x"}
